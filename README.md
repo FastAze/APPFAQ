@@ -4,10 +4,10 @@
 ## Periode : 
 
 ## Membres : 
--Sylvain HONTANS
--Baptiste CHAILLOU
--Mathis BOURDIL
--Landry ALLORD
+>-Sylvain HONTANS  
+-Baptiste CHAILLOU  
+-Mathis BOURDIL  
+-Landry ALLORD  
 
 ## Description du contenu : 
 
