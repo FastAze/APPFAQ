@@ -4,8 +4,8 @@
 ## Periode : 
 
 ## Membres : 
->-Sylvain HONTANS  
--Baptiste CHAILLOU  
+>-[Sylvain HONTANS](https://github.com/Hontans)  
+-[Baptiste CHAILLOU](https://github.com/FastAze)  
 -Mathis BOURDIL  
 -Landry ALLORD  
 
