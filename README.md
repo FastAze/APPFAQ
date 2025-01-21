@@ -6,8 +6,8 @@
 ## Membres : 
 >-[Sylvain HONTANS](https://github.com/Hontans)  
 -[Baptiste CHAILLOU](https://github.com/FastAze)  
--Mathis BOURDIL  
--Landry ALLORD  
+-[Mathis BOURDIL](https://github.com/Mathis-Dev25)  
+-[Landry ALLORD](https://github.com/LandryAld)   
 
 ## Description du contenu : 
 
