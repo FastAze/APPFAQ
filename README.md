@@ -1,5 +1,6 @@
 # M2L
 ## Description : 
+Un site web coder en PHP et css composer d'une foire au question
 
 ## Periode : 
 01/2025  
@@ -11,7 +12,16 @@
 -[Landry ALLORD](https://github.com/LandryAld)   
 
 ## Description du contenu : 
+- F.A.Q  
+-  Connection  
+-  Déconnexion  
+-  Créer un compte
+-  Poser une question
+-  Suprimmer une question
+-  répondre a une question
+-  suprimer une quesiton
+-  voire la liste des quesiton
 
 ## Procédure d'installation du Projet : 
-
+-  
 ## Utilisateur et Mot de passe : 
