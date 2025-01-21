@@ -1,0 +1,35 @@
+CREATE TABLE Types_Utilisateur (
+    id_Types INT AUTO_INCREMENT,
+    Libelle VARCHAR(50),
+    Description VARCHAR(255),
+    PRIMARY KEY (id_Types)
+);
+
+CREATE TABLE Ligues (
+    id_Ligues INT AUTO_INCREMENT,
+    Libelle VARCHAR(50),
+    PRIMARY KEY (id_Ligues)
+);
+
+CREATE TABLE Utilisateurs (
+    id_Utilisateurs INT AUTO_INCREMENT,
+    Login_Pseudo VARCHAR(50),
+    Email VARCHAR(50),
+    MDP VARCHAR(255),
+    id_Ligues INT NOT NULL,
+    id_Types INT NOT NULL,
+    PRIMARY KEY (id_Utilisateurs),
+    FOREIGN KEY (id_Ligues) REFERENCES Ligues(id_Ligues),
+    FOREIGN KEY (id_Types) REFERENCES Types_Utilisateur(id_Types)
+);
+
+CREATE TABLE FAQ (
+    idFAQ INT AUTO_INCREMENT,
+    Question VARCHAR(255),
+    Reponse VARCHAR(255),
+    Date_Heure_Question DATETIME,
+    Date_Heure_Reponse DATETIME,
+    id_Utilisateurs INT NOT NULL,
+    PRIMARY KEY (idFAQ),
+    FOREIGN KEY (id_Utilisateurs) REFERENCES Utilisateurs(id_Utilisateurs)
+);
