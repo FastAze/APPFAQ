@@ -23,6 +23,6 @@ Un site web coder en PHP et css composer d'une foire au question
 -  voire la liste des quesiton
 
 ## Procédure d'installation du Projet : 
-- Nous avons utilisé le logiciel Looping pour concevoir le Modèle Conceptuel de Données (MCD), ce qui nous a permis de générer un script SQL. Par la suite, nous avons utilisé PHPMyAdmin pour créer la base de données ainsi que le Modèle Logique de Données (MLD).
+- Nous avons utilisé le logiciel Looping pour concevoir le Modèle Conceptuel de Données (MCD), ce qui nous a permis de générer un script SQL. Par la suite, nous l'avons intégré dans PHPMyAdmin pour créer la base de données ainsi que le Modèle Logique de Données (MLD).
 
 ## Utilisateur et Mot de passe : 
