@@ -1,6 +1,6 @@
 # M2L
 ## Description : 
-Un site web coder en PHP et css composer d'une foire au question
+Un site web coder en PHP et css composer d'une foire au question 
 
 ## Periode : 
 01/2025  
