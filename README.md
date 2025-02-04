@@ -6,7 +6,7 @@ Un site web coder en PHP et css composer d'une foire au question
 01/2025  
 05/2025
 ## Membres : 
->-[Sylvain HONTANS](https://github.com/Hontans)  
+-[Sylvain HONTANS](https://github.com/Hontans)  
 -[Baptiste CHAILLOU](https://github.com/FastAze)  
 -[Mathis BOURDIL](https://github.com/Mathis-Dev25)  
 -[Landry ALLORD](https://github.com/LandryAld)   
