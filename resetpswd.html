@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login M2L</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(135deg, #667eea, #764ba2);
+        }
+        .container {
+            background: white;
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            animation: fadeIn 0.8s ease-in-out;
+            max-width: 400px;
+            width: 100%;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-90px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .container h2 {
+            margin-bottom: 1rem;
+            color: #333;
+        }
+        .container input {
+            width: 100%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .container button {
+            width: 100%;
+            padding: 10px;
+            background: #667eea;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background 0.3s;
+        }
+        .container button:hover {
+            background: #5a67d8;
+        }
+        a {
+            text-decoration: none;
+        }
+        a:hover {
+            text-decoration: underline;
+        }
+
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h2>Réinitialiser votre mot de passe</h2>
+        <form id="Connexion" action="#" method="POST">
+            <label for="mail">Adresse email</label><br>
+            <input type="text" id="mail" name="mail"/><br>
+
+            <button type="submit">Réinitialiser</button> <br> <br>
+
+                <a>Vous n'avez pas de compte ?</a>
+                <a href="#">S'inscrire</a>
+        </form>
+    </div>
+</body>
+</html>
