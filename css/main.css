@@ -4,6 +4,7 @@
     box-sizing: border-box;
     font-family: Arial, sans-serif;
 }
+
 body {
     display: flex;
     justify-content: center;
@@ -11,6 +12,7 @@ body {
     height: 100vh;
     background: linear-gradient(135deg, #667eea, #764ba2);
 }
+
 .signup-container {
     background: white;
     padding: 2rem;
@@ -19,14 +21,17 @@ body {
     text-align: center;
     animation: fadeIn 0.8s ease-in-out;
 }
+
 @keyframes fadeIn {
     from { opacity: 0; transform: translateY(-90px); }
     to { opacity: 1; transform: translateY(0); }
 }
+
 .signup-container h2 {
     margin-bottom: 1rem;
     color: #333;
 }
+
 .signup-container input {
     width: 100%;
     padding: 10px;
@@ -34,6 +39,7 @@ body {
     border: 1px solid #ccc;
     border-radius: 5px;
 }
+
 .signup-container button {
     width: 100%;
     padding: 10px;
@@ -43,12 +49,72 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
-    font-size: 16px; /* Text size for the button */
 }
+
 .signup-container button:hover {
     background: #5a67d8;
 }
 
-.signup-container textarea {
-    font-size: 15px;
+.container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    max-width: 400px;
+    width: 100%;
+}
+
+.container h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+.container input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.container button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.container button:hover {
+    background: #5a67d8;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+.remember-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.remember-me .left {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
 }
