@@ -43,7 +43,12 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    font-size: 16px; /* Text size for the button */
 }
 .signup-container button:hover {
     background: #5a67d8;
+}
+
+.signup-container textarea {
+    font-size: 15px;
 }
