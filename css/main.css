@@ -38,6 +38,7 @@ body {
     margin: 10px 0;
     border: 1px solid #ccc;
     border-radius: 5px;
+
 }
 
 .signup-container button {
@@ -169,6 +170,17 @@ a:hover {
     display: none;
 }
 
+.reponse-btn {
+    width: 9%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
 .reponse p {
     color: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
@@ -183,6 +195,7 @@ a:hover {
 .faq.active {
     border: none;
 }
+
 
 .signup-container {
     background: white;
@@ -245,4 +258,35 @@ p, a {
 .inline {
     display: flex;
     align-items: center;
+
+* select {
+    width: 100%;;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.floating-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #acacac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+.floating-button:hover {
+    background: #5a67d8;
+}
+
+footer {
+    display: block;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
 }

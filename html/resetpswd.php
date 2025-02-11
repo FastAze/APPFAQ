@@ -1,3 +1,7 @@
+<?php
+    include '../template/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -8,6 +12,7 @@
 </head>
 
 <body>
+    <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
     <div class="container">
         <h2>Réinitialiser votre mot de passe</h2>
         <form id="Connexion" action="#" method="POST">
@@ -17,8 +22,12 @@
             <button type="submit">Réinitialiser</button>
             <br>
             <br>
-                <a href="login.html">Anuller</a>
+            <a href="login.html">Anuller</a>
         </form>
     </div>
 </body>
 </html>
+<?php
+    include '../template/footer.php';
+?>
+

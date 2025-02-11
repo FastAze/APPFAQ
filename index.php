@@ -1,3 +1,7 @@
+<?php
+    include 'template/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,14 +13,22 @@
 <body>
     <div class="signup-container">
         <h2>Bienvenue sur l'APP F.A.Q</h2>
-        <p>Vous avez des questions ?
+        <p>Vous avez des questions ? 
+            
         <br>
         <br>
+        
         Nous avons des réponses !</p>
         <br>
-        <button onclick="window.location.href='/html/login.html'">Connection</button>
+        <button onclick="window.location.href='/html/login.php'">Connection</button>
         <br>
-        <button onclick="window.location.href='/html/register.html'">Inscription</button>
         <br>
-</body>
+        <button onclick="window.location.href='/html/register.php'">Inscription</button>
+        <br>
+        </div>
 </html>
+
+<?php
+    include 'template/footer.php';
+?>
+

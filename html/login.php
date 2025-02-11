@@ -1,3 +1,7 @@
+
+<?php
+    include '../template/header.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -23,7 +27,6 @@
                     <label for="souvenir">Se souvenir de moi</label>
                 </div>
             </div>
-
             <button type="submit">Se connecter</button><!-- Avec le PHP nous allons vérifier la Connexion et rediriger vers la page appfaq.html-->
             <br>
             <br>
@@ -34,7 +37,16 @@
             <br>
             <p>Vous n'avez pas de compte ?</p>
             <a href="signup.html">S'inscrire</a>
+            <button type="submit">Se connecter</button>
+            <br>
+            <br>
+                <a>Vous n'avez pas de compte ?</a>
+                <a href="/html/register.html">S'inscrire</a>
         </form>
     </div>
 </body>
 </html>
+<?php
+    include '../template/footer.php';
+?>
+

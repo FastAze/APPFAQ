@@ -1,3 +1,8 @@
+
+<?php
+    include '../template/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -7,6 +12,8 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
+
     <div class="signup-container">
         <h2>Modifier la réponse</h2>
         <label for="réponses">Réponses</label>
@@ -18,3 +25,6 @@
     </div>
 </body>
 </html>
+<?php
+    include '../template/footer.php';
+?>
