@@ -14,10 +14,8 @@
     <div class="signup-container">
         <h2>Bienvenue sur l'APP F.A.Q</h2>
         <p>Vous avez des questions ? 
-            
         <br>
         <br>
-        
         Nous avons des réponses !</p>
         <br>
         <button onclick="window.location.href='/html/login.php'">Connection</button>
