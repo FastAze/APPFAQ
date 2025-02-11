@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Edit message</title>
+    <title>Modifier le message</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
@@ -17,7 +17,7 @@
         <textarea name="message" id="message" placeholder="Message" rows="10" cols="60" style="resize: none;"></textarea>
         <p></p>
         <p></p>
-        <button onclick="window.location.href='(PLACE HOLDER)'">Comfirmer les changement</button>
+        <button onclick="window.location.href='appfaq.php'">Confirmer les changements</button>
     </div>
 </body>
 </html>
