@@ -12,6 +12,13 @@
         <form id="Inscription" action="#" method="POST">
             <label for="username">Nom d'utilisateur</label><br>
             <input type="text" id="username" name="username"/><br>
+
+            <select name="ligue" id="ligue">
+                <option value="liguefoot">Ligue de football</option>
+                <option value="liguebasket">Ligue de basket</option>
+                <option value="liguevolley">Ligue de volley</option>
+                <option value="liguehandball">Ligue de handball</option>
+                <option value="toutesligues">Toutes les ligues</option>
             
             <label for="email">Adresse e-mail</label><br>
             <input type="email" id="email" name="email"><br>
@@ -27,7 +34,7 @@
                     <input type="checkbox" id="souvenir"/>
                     <label for="souvenir">Se souvenir de moi</label>
                 </div>
-                <a href="#">Mot de passe oublié?</a>
+
             </div>
 
             <button type="submit">Se connecter</button>
