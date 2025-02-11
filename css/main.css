@@ -236,3 +236,8 @@ a:hover {
 .signup-container .cancel-btn:hover {
     background: #bbb;
 }
+
+p, a {
+    display: inline;
+    margin-right: 5px;
+}
