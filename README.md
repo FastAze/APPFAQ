@@ -18,11 +18,14 @@ Un site web codé en PHP et css composé d'une foire aux questions
 -  Déconnexion  
 -  Créer un compte  
 -  Poser une question  
--  Supprimer une question  
+-  Supprimer une question (voir commentaire)
+-  Supprimer une résponse (voir commentaire)
 -  Répondre à une question  
 -  Voir la liste des questions  
+-  Réinitialisation du mot de passe 
+-  Modifier une réponse (voir commentaire)
+-  Modifier une question (voir commentaire)
 -  Sitemap  
--  Réinitialisation du mot de passe  
 -  Modèle logique de données (MLD)  
 -  Modèle conceptuel de données (MCD)  
 -  Modèle physique des données (MPD)  
