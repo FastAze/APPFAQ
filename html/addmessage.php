@@ -1,3 +1,7 @@
+<?php
+    include '../template/header.php';
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -76,3 +80,7 @@
 
 </body>
 </html>
+
+<?php
+    include '../template/footer.php';
+?>

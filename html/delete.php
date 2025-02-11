@@ -1,3 +1,6 @@
+<?php
+    include '../template/header.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -12,3 +15,6 @@
     </div>
 </body>
 </html>
+<?php
+    include '../template/footer.php';
+?>

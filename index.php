@@ -1,3 +1,6 @@
+<?php
+    include 'template/header.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -22,5 +25,8 @@
         <button onclick="window.location.href='/html/register.php'">Inscription</button>
         <br>
         </div>
-
 </html>
+
+<?php
+    include 'template/footer.php';
+?>
