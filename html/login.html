@@ -5,11 +5,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connection</title>
     <link rel="stylesheet" href="/css/main.css">
-    <style>
-        .no-wrap {
-            white-space: nowrap;
-        }
-    </style>
 </head>
 
 <body>
@@ -32,13 +27,13 @@
             <button type="submit">Se connecter</button><!-- Avec le PHP nous allons vérifier la Connexion et rediriger vers la page appfaq.html-->
             <br>
             <br>
-            <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
+            <div class="inline">
+                <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
+                <a href="resetpswd.html">Réinitialiser le mot de passe</a>
+            </div>
             <br>
-            <input class="no-wrap" type="button" class="btn" href="resetpswd.html" value="Réinitialiser le mot de passe">
-            <br>
-            <br>
-                <p>Vous n'avez pas de compte ?</p>
-                <a href="signup.html">S'inscrire</a>
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="signup.html">S'inscrire</a>
         </form>
     </div>
 </body>
