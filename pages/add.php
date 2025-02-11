@@ -14,7 +14,7 @@
         <h2>Ajouter une question</h2>
         <textarea placeholder="Entrez votre message" required></textarea>
         <button>Enregistrer</button>
-        <button class="cancel-btn" onclick="window.location.href='appfaq.php'">Annuler</button>
+        <button class="cancel-btn" onclick="window.location.href='appfaq.php'">Annuler</button><!-- Ajoute la question à la liste avec le PHP -->
     </div>
 </body>
 </html>

@@ -14,7 +14,7 @@
         <h2>Modifier la réponse</h2>
         <label for="réponses">Réponses</label>
         <p></p>
-        <textarea name="réponses" id="réponses" placeholder="Réponses" rows="10" cols="60" style="resize: none;"></textarea>
+        <textarea name="réponses" id="réponses" placeholder="Réponses" rows="10" cols="60" style="resize: none;"></textarea> <!-- Affiche la réponse à modifier avec le PHP-->
         <p></p>
         <p></p>
         <button onclick="window.location.href='appfaq.php'">Comfirmer les changement</button>

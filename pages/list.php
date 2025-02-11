@@ -22,7 +22,7 @@
         <p>Reponse</p>
         <!-- Ajout des FAQ et de leurs réponses avec le PHP -->
         <p>
-            <input class="reponse-btn"  type="button" id="repondre" name="repondre" value="Répondre"/>
+            <input class="reponse-btn"  type="button" id="repondre" name="repondre" value="Répondre"/> <!-- Avec ce bouton on pourra afficher la réponse à la question -->
         </p>
         </div>
     </div>
