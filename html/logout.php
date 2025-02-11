@@ -1,6 +1,3 @@
-<?php
-    include '../template/header.php';
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>

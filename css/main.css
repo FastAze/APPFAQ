@@ -100,7 +100,7 @@ a:hover {
 
 .mid {
     max-width: 75%;
-    margin: auto;
+    margin: 80px auto 0 auto; /* Ajoute une marge supérieure de 80px */
 }
 
 .mid > p,
@@ -194,25 +194,64 @@ p, a {
     background: #5a67d8;
 }
 
-footer {
-    background: #333;
-    color: white;
-    text-align: center;
-    padding: 30px 0;
-    width: 100%;
-    margin-top: auto; 
-    position: fixed;
-    bottom: 0;
-    left: 0;
-}
-
 header {
-    background: #333;
+    background: transparent;
     padding: 15px 0;
     position: fixed;
     width: 100%;
     top: 0;
     left: 0;
     z-index: 1000;
+    display: flex;
+    justify-content: center;
+}
 
+header nav ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+header nav ul li {
+    display: inline;
+}
+
+header nav ul li a {
+    color: white;
+    text-decoration: none;
+    padding: 10px 15px;
+    transition: background 0.3s;
+}
+
+header nav ul li a:hover {
+    background: #5a67d8;
+    border-radius: 5px;
+}
+
+.floating-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #acacac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.floating-button:hover {
+    background: #5a67d8;
+}
+
+footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    color: white;
+    z-index: 10;
+    padding: 20px 0;
 }
