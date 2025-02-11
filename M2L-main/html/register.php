@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="container">
@@ -23,7 +23,7 @@
                 <option value="liguehandball">Ligue de handball</option>
                 <option value="toutesligues">Toutes les ligues</option>
             
-            <label for="email">Adresse e-mail</label><br>
+            <label for="email">Adresse e-mail</label>
             <input type="email" id="email" name="email"><br>
             
             <label for="password">Mot de passe</label><br>

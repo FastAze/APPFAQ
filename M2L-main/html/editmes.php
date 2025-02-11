@@ -1,8 +1,6 @@
-
 <?php
     include '../template/header.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,12 +11,11 @@
 </head>
 <body>
     <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
-
     <div class="signup-container">
-        <h2>Modifier la réponse</h2>
-        <label for="réponses">Réponses</label>
+        <h2>Modifier le message</h2>
+        <label for="message" class="test">Message</label>
         <p></p>
-        <textarea name="réponses" id="réponses" placeholder="Réponses" rows="10" cols="60" style="resize: none;"></textarea>
+        <textarea name="message" id="message" placeholder="Message" rows="10" cols="60" style="resize: none;"></textarea>
         <p></p>
         <p></p>
         <button onclick="window.location.href='(PLACE HOLDER)'">Comfirmer les changement</button>

@@ -1,4 +1,3 @@
-
 <?php
     include '../template/header.php';
 ?>
@@ -8,11 +7,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connection</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
-    <div class="container">
+    <div class="signup-container">
         <h2>Connexion</h2>
         <form id="Connexion" action="login.html" method="POST">
             <label for="username">Identifiant</label><br>
@@ -27,16 +26,7 @@
                     <label for="souvenir">Se souvenir de moi</label>
                 </div>
             </div>
-            <button type="submit">Se connecter</button><!-- Avec le PHP nous allons vérifier la Connexion et rediriger vers la page appfaq.html-->
-            <br>
-            <br>
-            <div class="inline">
-                <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
-                <a href="resetpswd.html">Réinitialiser le mot de passe</a>
-            </div>
-            <br>
-            <p>Vous n'avez pas de compte ?</p>
-            <a href="signup.html">S'inscrire</a>
+
             <button type="submit">Se connecter</button>
             <br>
             <br>

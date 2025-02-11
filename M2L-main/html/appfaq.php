@@ -1,8 +1,6 @@
-
 <?php
     include '../template/header.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
   <head>
@@ -18,19 +16,15 @@
     </style>
   </head>
   <body>
-
     <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
-
     <div class="mid">
       <div class="faq">
         <button class="question">FAQ</button>
         <div class="reponse">
           <p>Reponse</p>
-
           <p>
             <input class="reponse-btn"  type="button" id="repondre" name="repondre" value="Répondre"/>
           </p>
-
         </div>
       </div>
     </div>
@@ -55,9 +49,7 @@
       }
     </script>
   </body>
-
 </html>
 <?php
     include '../template/footer.php';
 ?>
-

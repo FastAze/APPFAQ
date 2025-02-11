@@ -1,0 +1,250 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; 
+    background: linear-gradient(135deg, #667eea, #764ba2);
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 30px 0;
+    width: 100%;
+    margin-top: auto; 
+}
+
+header {
+    background: #333;
+    padding: 15px 0;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    margin: auto;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+}
+
+nav ul li {
+    margin: 0 15px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #667eea;
+}
+
+
+
+.container, .signup-container {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    animation: fadeIn 0.8s ease-in-out;
+    max-width: 400px;
+    width: 100%;
+    margin: auto; 
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-54px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+h2 {
+    margin-bottom: 1rem;
+    color: #333;
+}
+
+
+input, select, textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #667eea;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background 0.3s;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: #5a67d8;
+}
+
+
+a {
+    text-decoration: none;
+    color: #667eea;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+
+.remember-me {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 10px 0;
+}
+
+.remember-me .left {
+    display: flex;
+    align-items: center;
+    white-space: nowrap;
+}
+
+.remember-me input[type="checkbox"] {
+    margin-right: 8px;
+}
+
+
+.mid {
+    max-width: 75%;
+    margin: auto;
+    text-align: center;
+}
+
+.mid > p, .mid > h1 {
+    margin: 1.5rem 0;
+}
+
+.mid > h1 {
+    letter-spacing: 3px;
+}
+
+
+.question {
+    background-color: white;
+    color: rgba(0, 0, 0, 0.8);
+    cursor: pointer;
+    font-size: 1.2rem;
+    width: 100%;
+    padding: 2rem 2.5rem;
+    border: none;
+    outline: none;
+    transition: 0.4s;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.question i {
+    font-size: 1.6rem;
+}
+
+.active, .question:hover {
+    background-color: #f1f7f5;
+}
+
+
+.reponse {
+    padding: 0 2rem 2.5rem;
+    background-color: #f1f7f5;
+    display: none;
+}
+
+.reponse p {
+    color: rgba(0, 0, 0, 0.7);
+    font-size: 1.2rem;
+    line-height: 1.4;
+}
+
+.faq {
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    margin: 10px 0;
+}
+
+.faq.active {
+    border: none;
+}
+
+.floating-button {
+    position: fixed;
+    top: 10px;
+    right: 10px;
+    background: #acacac;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.floating-button:hover {
+    background: #5a67d8;
+}
+
+
+footer {
+    background: #333;
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    width: 100%;
+    
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.footer-container p {
+    margin: 5px 0;
+}
+
+footer nav {
+    margin-top: 10px;
+}
+
+footer nav a {
+    color: #ccc;
+    text-decoration: none;
+    margin: 0 10px;
+    transition: color 0.3s;
+}
+
+footer nav a:hover {
+    color: #fff;
+}
