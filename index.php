@@ -8,16 +8,19 @@
 </head>
 <body>
     <div class="signup-container">
-        <h2>bien venu sur l'APP F.A.Q</h2>
-        <p>Vous avez des questions ?
+        <h2>Bienvenue sur l'APP F.A.Q</h2>
+        <p>Vous avez des questions ? 
+            
         <br>
         <br>
+        
         Nous avons des réponses !</p>
         <br>
-        <button onclick="window.location.href='/html/login.html'">Connection</button>
+        <button onclick="window.location.href='/html/login.php'">Connection</button>
         <br>
         <br>
-        <button onclick="window.location.href='/html/register.html'">Inscription</button>
+        <button onclick="window.location.href='/html/register.php'">Inscription</button>
         <br>
-</body>
+        </div>
+
 </html>

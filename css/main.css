@@ -217,3 +217,13 @@ a:hover {
 .floating-button:hover {
     background: #5a67d8;
 }
+
+footer {
+    display: block;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px 0;
+}
