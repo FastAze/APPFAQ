@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inscription</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <div class="container">
@@ -42,10 +42,10 @@
 
             </div>
 
-            <button type="submit">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.html-->
+            <button type="submit">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
 
             <p>Vous avez un compte ?</p>
-            <a href="/html/login.html">login</a>
+            <a href="login.php">login</a>
         </form>
     </div>
 </body>

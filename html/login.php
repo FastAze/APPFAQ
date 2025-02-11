@@ -6,14 +6,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Connection</title>
-    <link rel="stylesheet" href="/css/main.css">
+    <title>Connexion</title>
+    <link rel="stylesheet" href="../css/main.css">
 </head>
 
 <body>
     <div class="container">
         <h2>Connexion</h2>
-        <form id="Connexion" action="login.html" method="POST">
+        <form id="Connexion" action="login.php" method="POST">
             <label for="username">Identifiant</label><br>
             <input type="text" id="username" name="username"/><br>
             
@@ -26,16 +26,16 @@
                     <label for="souvenir">Se souvenir de moi</label>
                 </div>
             </div>
-            <button type="submit">Se connecter</button><!-- Avec le PHP nous allons vérifier la Connexion et rediriger vers la page appfaq.html-->
+            <button type="submit">Se connecter</button><!-- Avec le PHP nous allons vérifier la Connexion et rediriger vers la page appfaq.php-->
             <br>
             <br>
             <div class="inline">
                 <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
-                <a href="resetpswd.html">Réinitialiser le mot de passe</a>
+                <a href="resetpswd.php">Réinitialiser le mot de passe</a>
             </div>
             <br>
             <p>Vous n'avez pas de compte ?</p>
-            <a href="signup.html">S'inscrire</a>
+            <a href="register.php">S'inscrire</a>
         </form>
     </div>
 </body>
