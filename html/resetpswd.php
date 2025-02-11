@@ -1,6 +1,7 @@
 <?php
     include '../template/header.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -21,7 +22,7 @@
             <button type="submit">Réinitialiser</button>
             <br>
             <br>
-                <a href="/html/register.html">Anuller</a>
+            <a href="login.html">Anuller</a>
         </form>
     </div>
 </body>
@@ -29,3 +30,4 @@
 <?php
     include '../template/footer.php';
 ?>
+

@@ -1,3 +1,4 @@
+
 <?php
     include '../template/header.php';
 ?>
@@ -26,7 +27,16 @@
                     <label for="souvenir">Se souvenir de moi</label>
                 </div>
             </div>
-
+            <button type="submit">Se connecter</button><!-- Avec le PHP nous allons vérifier la Connexion et rediriger vers la page appfaq.html-->
+            <br>
+            <br>
+            <div class="inline">
+                <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
+                <a href="resetpswd.html">Réinitialiser le mot de passe</a>
+            </div>
+            <br>
+            <p>Vous n'avez pas de compte ?</p>
+            <a href="signup.html">S'inscrire</a>
             <button type="submit">Se connecter</button>
             <br>
             <br>
