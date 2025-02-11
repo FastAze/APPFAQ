@@ -26,9 +26,7 @@
         <button onclick="window.location.href='/html/register.php'">Inscription</button>
         <br>
         </div>
+        <?php
+            include 'template/footer.php';
+        ?>
 </html>
-
-<?php
-    include 'template/footer.php';
-?>
-
