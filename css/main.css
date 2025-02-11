@@ -1,257 +1,278 @@
+/* Réinitialise les marges et les paddings par défaut, définit la boîte de dimensionnement et la police par défaut */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: Arial, sans-serif;
+    margin: 0; /* Supprime les marges par défaut */
+    padding: 0; /* Supprime les paddings par défaut */
+    box-sizing: border-box; /* Inclut le padding et la bordure dans les dimensions de l'élément */
+    font-family: Arial, sans-serif; /* Définit la police par défaut */
 }
 
+/* Styles pour le corps de la page */
 body {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-    background: linear-gradient(135deg, #667eea, #764ba2);
+    display: flex; /* Utilise le modèle de boîte flexible */
+    justify-content: center; /* Centre le contenu horizontalement */
+    align-items: center; /* Centre le contenu verticalement */
+    height: 100vh; /* Définit la hauteur à 100% de la hauteur de la fenêtre */
+    background: linear-gradient(135deg, #667eea, #764ba2); /* Applique un dégradé de fond */
 }
 
+/* Styles pour les conteneurs */
 .container {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 0.8s ease-in-out;
-    max-width: 400px;
-    width: 100%;
+    background: white; /* Définit le fond blanc */
+    padding: 2rem; /* Ajoute un padding de 2 rem */
+    border-radius: 10px; /* Arrondit les coins avec un rayon de 10px */
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); /* Ajoute une ombre portée */
+    text-align: center; /* Centre le texte */
+    animation: fadeIn 0.8s ease-in-out; /* Applique une animation de fondu */
+    max-width: 400px; /* Définit la largeur maximale à 400px */
+    width: 100%; /* Définit la largeur à 100% */
 }
 
+/* Définition de l'animation de fondu */
 @keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-90px); }
-    to { opacity: 1; transform: translateY(0); }
+    from { opacity: 0; transform: translateY(-90px); } /* Départ de l'animation : invisible et déplacé vers le haut */
+    to { opacity: 1; transform: translateY(0); } /* Fin de l'animation : visible et en position normale */
 }
 
+/* Styles pour les titres dans les conteneurs */
 .container h2 {
-    margin-bottom: 1rem;
-    color: #333;
+    margin-bottom: 1rem; /* Ajoute une marge inférieure de 1 rem */
+    color: #333; /* Définit la couleur du texte */
 }
 
+/* Styles pour les champs de saisie et les zones de texte dans les conteneurs */
 .container input, .container textarea {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    width: 100%; /* Définit la largeur à 100% */
+    padding: 10px; /* Ajoute un padding de 10px */
+    margin: 10px 0; /* Ajoute une marge de 10px en haut et en bas */
+    border: 1px solid #ccc; /* Ajoute une bordure grise */
+    border-radius: 5px; /* Arrondit les coins avec un rayon de 5px */
 }
 
+/* Styles spécifiques pour les zones de texte dans les conteneurs */
 .container textarea {
-    height: 100px;
-    resize: none;
+    height: 100px; /* Définit la hauteur à 100px */
+    resize: none; /* Désactive le redimensionnement */
 }
 
+/* Styles pour les boutons dans les conteneurs et les boutons de réponse */
 .container button, .reponse-btn {
-    width: 100%;
-    padding: 10px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin: 10px 0;
+    width: 100%; /* Définit la largeur à 100% */
+    padding: 10px; /* Ajoute un padding de 10px */
+    background: #667eea; /* Définit la couleur de fond */
+    color: white; /* Définit la couleur du texte */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Arrondit les coins avec un rayon de 5px */
+    cursor: pointer; /* Change le curseur en pointeur */
+    transition: background 0.3s; /* Ajoute une transition pour la couleur de fond */
+    margin: 10px 0; /* Ajoute une marge de 10px en haut et en bas */
 }
 
+/* Styles pour les boutons au survol */
 .container button:hover, .reponse-btn:hover {
-    background: #5a67d8;
+    background: #5a67d8; /* Change la couleur de fond au survol */
 }
 
+/* Styles spécifiques pour les boutons d'annulation dans les conteneurs */
 .container .cancel-btn {
-    background: #ccc;
+    background: #ccc; /* Définit la couleur de fond */
 }
 
+/* Styles pour les boutons d'annulation au survol */
 .container .cancel-btn:hover {
-    background: #bbb;
+    background: #bbb; /* Change la couleur de fond au survol */
 }
 
+/* Styles pour les liens */
 a {
-    text-decoration: none;
+    text-decoration: none; /* Supprime la décoration de texte */
 }
 
+/* Styles pour les liens au survol */
 a:hover {
-    text-decoration: underline;
+    text-decoration: underline; /* Ajoute une décoration de texte au survol */
 }
 
+/* Styles pour la section "se souvenir de moi" */
 .remember-me {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin: 10px 0;
+    display: flex; /* Utilise le modèle de boîte flexible */
+    justify-content: space-between; /* Espace les éléments de manière égale */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    margin: 10px 0; /* Ajoute une marge de 10px en haut et en bas */
 }
 
+/* Styles pour la section gauche de "se souvenir de moi" */
 .remember-me .left {
-    display: flex;
-    align-items: center;
-    white-space: nowrap;
+    display: flex; /* Utilise le modèle de boîte flexible */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    white-space: nowrap; /* Empêche le retour à la ligne */
 }
 
+/* Styles pour les cases à cocher dans "se souvenir de moi" */
 .remember-me input[type="checkbox"] {
-    margin-right: 8px;
+    margin-right: 8px; /* Ajoute une marge droite de 8px */
 }
 
+/* Importation de la police Roboto */
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
 
+/* Styles pour la section FAQ */
 .mid {
-    max-width: 75%;
-    margin: 80px auto 0 auto; /* Ajoute une marge supérieure de 80px */
+    max-width: 75%; /* Définit la largeur maximale à 75% */
+    margin: 80px auto 0 auto; /* Ajoute une marge supérieure de 80px et centre horizontalement */
 }
 
+/* Styles pour les paragraphes et les titres dans la section FAQ */
 .mid > p,
 .mid > h1 {
-    margin: 1.5rem 0;
-    text-align: center;
+    margin: 1.5rem 0; /* Ajoute une marge de 1.5 rem en haut et en bas */
+    text-align: center; /* Centre le texte */
 }
 
+/* Styles spécifiques pour les titres dans la section FAQ */
 .mid > h1 {
-    letter-spacing: 3px;
+    letter-spacing: 3px; /* Ajoute un espacement entre les lettres */
 }
 
+/* Styles pour les questions dans la FAQ */
 .question {
-    background-color: white;
-    color: rgba(0, 0, 0, 0.8);
-    cursor: pointer;
-    font-size: 1.2rem;
-    width: 100%;
-    padding: 2rem 2.5rem;
-    border: none;
-    outline: none;
-    transition: 0.4s;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    font-weight: bold;
+    background-color: white; /* Définit la couleur de fond */
+    color: rgba(0, 0, 0, 0.8); /* Définit la couleur du texte */
+    cursor: pointer; /* Change le curseur en pointeur */
+    font-size: 1.2rem; /* Définit la taille de la police */
+    width: 100%; /* Définit la largeur à 100% */
+    padding: 2rem 2.5rem; /* Ajoute un padding de 2 rem en haut et en bas, et de 2.5 rem à gauche et à droite */
+    border: none; /* Supprime la bordure */
+    outline: none; /* Supprime le contour */
+    transition: 0.4s; /* Ajoute une transition */
+    display: flex; /* Utilise le modèle de boîte flexible */
+    justify-content: space-between; /* Espace les éléments de manière égale */
+    align-items: center; /* Aligne les éléments au centre verticalement */
+    font-weight: bold; /* Définit le texte en gras */
 }
 
+/* Styles pour les icônes dans les questions de la FAQ */
 .question i {
-    font-size: 1.6rem;
+    font-size: 1.6rem; /* Définit la taille de la police */
 }
 
+/* Styles pour les questions actives et au survol */
 .active,
 .question:hover {
-    background-color: #f1f7f5;
+    background-color: #f1f7f5; /* Change la couleur de fond */
 }
 
+/* Styles pour les réponses dans la FAQ */
 .reponse {
-    padding: 0 2rem 2.5rem 2rem;
-    background-color: white;
-    overflow: hidden;
-    background-color: #f1f7f5;
-    display: none;
+    padding: 0 2rem 2.5rem 2rem; /* Ajoute un padding */
+    background-color: white; /* Définit la couleur de fond */
+    overflow: hidden; /* Cache le débordement */
+    background-color: #f1f7f5; /* Change la couleur de fond */
+    display: none; /* Cache l'élément */
 }
 
+/* Styles pour les paragraphes dans les réponses de la FAQ */
 .reponse p {
-    color: rgba(0, 0, 0, 0.7);
-    font-size: 1.2rem;
-    line-height: 1.4;
+    color: rgba(0, 0, 0, 0.7); /* Définit la couleur du texte */
+    font-size: 1.2rem; /* Définit la taille de la police */
+    line-height: 1.4; /* Définit la hauteur de ligne */
 }
 
+/* Styles pour les éléments de la FAQ */
 .faq {
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    margin: 10px 0;
+    border: 1px solid rgba(0, 0, 0, 0.2); /* Ajoute une bordure */
+    margin: 10px 0; /* Ajoute une marge de 10px en haut et en bas */
 }
 
+/* Styles pour les éléments actifs de la FAQ */
 .faq.active {
-    border: none;
+    border: none; /* Supprime la bordure */
 }
 
+/* Styles pour les paragraphes et les liens */
 p, a {
-    display: inline;
-    margin-right: 5px;
+    display: inline; /* Affiche les éléments en ligne */
+    margin-right: 5px; /* Ajoute une marge droite de 5px */
 }
 
+/* Styles pour les éléments en ligne */
 .inline {
-    display: flex;
-    align-items: center;
+    display: flex; /* Utilise le modèle de boîte flexible */
+    align-items: center; /* Aligne les éléments au centre verticalement */
 }
 
+/* Styles pour les sélecteurs */
 * select {
-    width: 100%;
-    border-radius: 5px;
-    margin: 10px 0;
+    width: 100%; /* Définit la largeur à 100% */
+    border-radius: 5px; /* Arrondit les coins avec un rayon de 5px */
+    margin: 10px 0; /* Ajoute une marge de 10px en haut et en bas */
 }
 
+/* Styles pour le bouton flottant */
 .floating-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: #acacac;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 1000;
+    position: fixed; /* Positionne l'élément de manière fixe */
+    top: 10px; /* Positionne à 10px du haut */
+    right: 10px; /* Positionne à 10px de la droite */
+    background: #acacac; /* Définit la couleur de fond */
+    color: white; /* Définit la couleur du texte */
+    border: none; /* Supprime la bordure */
+    border-radius: 5px; /* Arrondit les coins avec un rayon de 5px */
+    padding: 10px 20px; /* Ajoute un padding de 10px en haut et en bas, et de 20px à gauche et à droite */
+    cursor: pointer; /* Change le curseur en pointeur */
+    z-index: 1000; /* Définit l'ordre de superposition */
 }
 
+/* Styles pour le bouton flottant au survol */
 .floating-button:hover {
-    background: #5a67d8;
+    background: #5a67d8; /* Change la couleur de fond au survol */
 }
 
+/* Styles pour le header */
 header {
-    background: transparent;
-    padding: 15px 0;
-    position: fixed;
-    width: 100%;
-    top: 0;
-    left: 0;
-    z-index: 1000;
-    display: flex;
-    justify-content: center;
+    background: transparent; /* Définit le fond transparent */
+    padding: 15px 0; /* Ajoute un padding de 15px en haut et en bas */
+    position: fixed; /* Positionne l'élément de manière fixe */
+    width: 100%; /* Définit la largeur à 100% */
+    top: 0; /* Positionne à 0px du haut */
+    left: 0; /* Positionne à 0px de la gauche */
+    z-index: 1000; /* Définit l'ordre de superposition */
+    display: flex; /* Utilise le modèle de boîte flexible */
+    justify-content: center; /* Centre le contenu horizontalement */
 }
 
+/* Styles pour la liste de navigation dans le header */
 header nav ul {
-    list-style: none;
-    display: flex;
-    gap: 20px;
+    list-style: none; /* Supprime les puces de liste */
+    display: flex; /* Utilise le modèle de boîte flexible */
+    gap: 20px; /* Ajoute un espacement de 20px entre les éléments */
 }
 
+/* Styles pour les éléments de la liste de navigation */
 header nav ul li {
-    display: inline;
+    display: inline; /* Affiche les éléments en ligne */
 }
 
+/* Styles pour les liens de navigation */
 header nav ul li a {
-    color: white;
-    text-decoration: none;
-    padding: 10px 15px;
-    transition: background 0.3s;
+    color: white; /* Définit la couleur du texte */
+    text-decoration: none; /* Supprime la décoration de texte */
+    padding: 10px 15px; /* Ajoute un padding de 10px en haut et en bas, et de 15px à gauche et à droite */
+    transition: background 0.3s; /* Ajoute une transition pour la couleur de fond */
 }
 
+/* Styles pour les liens de navigation au survol */
 header nav ul li a:hover {
-    background: #5a67d8;
-    border-radius: 5px;
+    background: #5a67d8; /* Change la couleur de fond au survol */
+    border-radius: 5px; /* Arrondit les coins avec un rayon de 5px */
 }
 
-.floating-button {
-    position: fixed;
-    top: 10px;
-    right: 10px;
-    background: #acacac;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-    z-index: 1000;
-}
-
-.floating-button:hover {
-    background: #5a67d8;
-}
-
+/* Styles pour le footer */
 footer {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    text-align: center;
-    color: white;
-    z-index: 10;
-    padding: 20px 0;
+    position: fixed; /* Positionne l'élément de manière fixe */
+    bottom: 0; /* Positionne à 0px du bas */
+    left: 0; /* Positionne à 0px de la gauche */
+    width: 100%; /* Définit la largeur à 100% */
+    text-align: center; /* Centre le texte */
+    color: white; /* Définit la couleur du texte */
+    z-index: 10; /* Définit l'ordre de superposition */
+    padding: 20px 0; /* Ajoute un padding de 20px en haut et en bas */
 }
