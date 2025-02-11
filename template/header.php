@@ -1,10 +1,10 @@
 <header>
-    
+    <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
     <nav>
         <ul>
-            <li><a href="../index.php">Accueil</a></li>
+            
             <li><a href="faq.php">FAQ</a></li>
-            <li><a href="contact.php">Contact</a></li>
+            <li><a href="">Contact</a></li>
             
         </ul>
     </nav>

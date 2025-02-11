@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
     <div class="container">
         <h2>Modifier la réponse</h2>
         <label for="réponses">Réponses</label>

@@ -12,7 +12,6 @@
 </head>
 
 <body>
-    <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
     <div class="container">
         <h2>Réinitialiser votre mot de passe</h2>
         <form id="Connexion" action="#" method="POST">

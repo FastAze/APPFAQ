@@ -19,8 +19,6 @@
   </head>
   <body>
 
-    <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
-
     <div class="mid">
       <div class="faq">
         <button class="question">FAQ</button>
