@@ -14,9 +14,9 @@
         <br>
         <p>Nous avons des réponses !</p>
         <br>
-        <button onclick="window.location.href='html/login.php'">Connexion</button>
+        <button onclick="window.location.href='pages/login.php'">Connexion</button>
         <br>
-        <button onclick="window.location.href='html/register.php'">Inscription</button>
+        <button onclick="window.location.href='pages/register.php'">Inscription</button>
         <br>
     </div>
     <?php
