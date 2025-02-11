@@ -1,4 +1,3 @@
-
 <?php
     include '../template/header.php';
 ?>
@@ -37,11 +36,6 @@
             <br>
             <p>Vous n'avez pas de compte ?</p>
             <a href="signup.html">S'inscrire</a>
-            <button type="submit">Se connecter</button>
-            <br>
-            <br>
-                <a>Vous n'avez pas de compte ?</a>
-                <a href="/html/register.html">S'inscrire</a>
         </form>
     </div>
 </body>
@@ -49,4 +43,3 @@
 <?php
     include '../template/footer.php';
 ?>
-

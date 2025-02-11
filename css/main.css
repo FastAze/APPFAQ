@@ -13,49 +13,6 @@ body {
     background: linear-gradient(135deg, #667eea, #764ba2);
 }
 
-.signup-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-90px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.signup-container h2 {
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.signup-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-}
-
-.signup-container button {
-    width: 100%;
-    padding: 10px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
-.signup-container button:hover {
-    background: #5a67d8;
-}
-
 .container {
     background: white;
     padding: 2rem;
@@ -67,12 +24,17 @@ body {
     width: 100%;
 }
 
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-90px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
 .container h2 {
     margin-bottom: 1rem;
     color: #333;
 }
 
-.container input {
+.container input, .container textarea {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -80,7 +42,12 @@ body {
     border-radius: 5px;
 }
 
-.container button {
+.container textarea {
+    height: 100px;
+    resize: none;
+}
+
+.container button, .reponse-btn {
     width: 100%;
     padding: 10px;
     background: #667eea;
@@ -89,10 +56,19 @@ body {
     border-radius: 5px;
     cursor: pointer;
     transition: background 0.3s;
+    margin: 10px 0;
 }
 
-.container button:hover {
+.container button:hover, .reponse-btn:hover {
     background: #5a67d8;
+}
+
+.container .cancel-btn {
+    background: #ccc;
+}
+
+.container .cancel-btn:hover {
+    background: #bbb;
 }
 
 a {
@@ -170,17 +146,6 @@ a:hover {
     display: none;
 }
 
-.reponse-btn {
-    width: 9%;
-    padding: 10px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-}
-
 .reponse p {
     color: rgba(0, 0, 0, 0.7);
     font-size: 1.2rem;
@@ -196,60 +161,6 @@ a:hover {
     border: none;
 }
 
-
-.signup-container {
-    background: white;
-    padding: 2rem;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
-    text-align: center;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-90px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.signup-container h2 {
-    margin-bottom: 1rem;
-    color: #333;
-}
-
-.signup-container textarea {
-    width: 100%;
-    height: 100px;
-    padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-    resize: none;
-}
-
-.signup-container button {
-    width: 100%;
-    padding: 10px;
-    background: #667eea;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background 0.3s;
-    margin: 10px 0;
-}
-
-.signup-container button:hover {
-    background: #5a67d8;
-}
-
-.signup-container .cancel-btn {
-    background: #ccc;
-}
-
-.signup-container .cancel-btn:hover {
-    background: #bbb;
-}
-
 p, a {
     display: inline;
     margin-right: 5px;
@@ -261,7 +172,7 @@ p, a {
 }
 
 * select {
-    width: 100%;;
+    width: 100%;
     border-radius: 5px;
     margin: 10px 0;
 }
@@ -278,6 +189,7 @@ p, a {
     cursor: pointer;
     z-index: 1000;
 }
+
 .floating-button:hover {
     background: #5a67d8;
 }

@@ -1,7 +1,6 @@
 <?php
     include 'template/header.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -11,20 +10,20 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <div class="signup-container">
+    <div class="container">
         <h2>Bienvenue sur l'APP F.A.Q</h2>
-        <p>Vous avez des questions ? 
+        <p>Vous avez des questions ?</p>
         <br>
         <br>
-        Nous avons des réponses !</p>
+        <p>Nous avons des réponses !</p>
         <br>
         <button onclick="window.location.href='/html/login.php'">Connection</button>
         <br>
-        <br>
         <button onclick="window.location.href='/html/register.php'">Inscription</button>
         <br>
-        </div>
-        <?php
-            include 'template/footer.php';
-        ?>
+    </div>
+    <?php
+        include 'template/footer.php';
+    ?>
+</body>
 </html>

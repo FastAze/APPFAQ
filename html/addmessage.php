@@ -1,4 +1,3 @@
-
 <?php
     include '../template/header.php';
 ?>
@@ -12,7 +11,7 @@
     <link rel="stylesheet" href="/css/main.css">
 </head>
 <body>
-    <div class="signup-container">
+    <div class="container">
         <h2>Ajouter une question</h2>
         <textarea placeholder="Entrez votre message" required></textarea>
         <button>Enregistrer</button>

@@ -1,8 +1,6 @@
-
 <?php
     include '../template/header.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -13,8 +11,7 @@
 </head>
 <body>
     <button class="floating-button" onclick="window.location.href='/html/logout.html'">Déconnexion</button>
-
-    <div class="signup-container">
+    <div class="container">
         <h2>Modifier la réponse</h2>
         <label for="réponses">Réponses</label>
         <p></p>

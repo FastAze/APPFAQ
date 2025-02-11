@@ -16,13 +16,15 @@
             <label for="username">Nom d'utilisateur</label><br>
             <input type="text" id="username" name="username"/><br>
 
+            <label for="ligue">Liste des ligue</label>
             <select name="ligue" id="ligue">
                 <option value="liguefoot">Ligue de football</option>
                 <option value="liguebasket">Ligue de basket</option>
                 <option value="liguevolley">Ligue de volley</option>
                 <option value="liguehandball">Ligue de handball</option>
                 <option value="toutesligues">Toutes les ligues</option>
-            
+            </select><br>
+
             <label for="email">Adresse e-mail</label><br>
             <input type="email" id="email" name="email"><br>
             
@@ -40,9 +42,9 @@
 
             </div>
 
-            <button type="submit">Se connecter</button>
+            <button type="submit">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.html-->
 
-            <a>Vous avez un compte ?</a>
+            <p>Vous avez un compte ?</p>
             <a href="/html/login.html">login</a>
         </form>
     </div>
