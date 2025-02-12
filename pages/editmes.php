@@ -12,12 +12,15 @@
 <body>
     <div class="container">
         <h2>Modifier le message</h2>
-        <label for="message" class="test">Message</label>
-        <p></p>
-        <textarea name="message" id="message" placeholder="Message" rows="10" cols="60" style="resize: none;"></textarea> <!-- Affiche le message à modifier avec le PHP-->
-        <p></p>
-        <p></p>
-        <button onclick="window.location.href='appfaq.php'">Confirmer les changements</button>
+        <form action="#" method="post">
+            <label for="message" class="test">Message</label>
+            <p></p>
+            <textarea name="message" id="message" placeholder="Message" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
+            <p></p>
+            <p></p>
+            <button type="submit">Confirmer les changements</button>
+        </form>
+        <button type="button" class="cancel-btn" onclick="window.location.href='list.php'">Annuler</button>
     </div>
 </body>
 </html>
