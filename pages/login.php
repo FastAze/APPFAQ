@@ -10,10 +10,14 @@
     <div class="container">
         <h2>Connexion</h2>
         <form id="Connexion" action="login.php" method="POST">
-            <label for="username">Identifiant</label><br>
-            <input type="text" id="username" name="username"/><br>
-            <label for="password">Mot de passe</label><br>
-            <input type="password" id="password" name="password"><br>
+            <label for="username">Identifiant</label>
+            <br>
+            <input type="text" id="username" name="username" required/>
+            <br>
+            <label for="password">Mot de passe</label>
+            <br>
+            <input type="password" id="password" name="password" required>
+            <br>
             <div class="remember-me">
                 <div class="left">
                     <input type="checkbox" id="souvenir"/>
