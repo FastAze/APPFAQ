@@ -12,9 +12,11 @@
 <body>
     <div class="container">
         <h2>Supprimer un message</h2>
-        <!-- Avec le PHP, nous allons afficher les questions des utilisateurs et une checkbox pour les sélectionner. -->
-        <button>Supprimer</button><!-- Supprime la question de la liste avec le PHP -->
-        <button class="cancel-btn" onclick="window.location.href='appfaq.php'">Annuler</button>
+        <form action="#" method="post">
+            <!-- Avec le PHP, nous allons afficher les questions des utilisateurs et une checkbox pour les sélectionner. -->
+            <button type="submit">Supprimer</button><!-- Supprime la question de la liste avec le PHP -->
+        </form>
+        <button type="button" class="cancel-btn" onclick="window.location.href='list.php'">Annuler</button>
     </div> 
 </body>
 </html>
