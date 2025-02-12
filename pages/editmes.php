@@ -14,10 +14,9 @@
         <h2>Modifier le message</h2>
         <form action="#" method="post">
             <label for="message" class="test">Message</label>
-            <p></p>
+            <br>
             <textarea name="message" id="message" placeholder="Message" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
-            <p></p>
-            <p></p>
+            <br>
             <button type="submit">Confirmer les changements</button>
         </form>
         <button type="button" class="cancel-btn" onclick="window.location.href='list.php'">Annuler</button>
