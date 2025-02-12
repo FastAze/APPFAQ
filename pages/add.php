@@ -12,9 +12,11 @@
 <body>
     <div class="container">
         <h2>Ajouter une question</h2>
-        <textarea placeholder="Entrez votre message" required></textarea>
-        <button>Enregistrer</button>
-        <button class="cancel-btn" onclick="window.location.href='appfaq.php'">Annuler</button><!-- Ajoute la question à la liste avec le PHP -->
+        <form action="#" method="post">
+            <textarea name="message" placeholder="Entrez votre message" required></textarea>
+            <button type="submit">Enregistrer</button><!-- Ajoute la question à la liste avec le PHP -->
+        </form>
+        <button class="cancel-btn" onclick="window.location.href='list.php'">Annuler</button>
     </div>
 </body>
 </html>
