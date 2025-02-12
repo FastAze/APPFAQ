@@ -10,13 +10,14 @@
     <div class="container">
         <h2>Réinitialiser votre mot de passe</h2>
         <form id="Connexion" action="#" method="POST">
-            <label for="mail">Adresse email</label><br>
-            <input type="text" id="mail" name="mail"/><br>
+            <label for="mail">Adresse email</label>
+            <br>
+            <input type="email" id="mail" name="mail" required>
+            <br>
             <button type="submit">Réinitialiser</button> <!-- Avec le PHP, nous allons vérifier l'adresse mail et envoyer un mail de réinitialisation-->
             <br>
-            <br>
-            <a href="login.php">Annuler</a>
         </form>
+        <button type="button" class="cancel-btn" onclick="window.location.href='login.php'">Annuler</button>
     </div>
 </body>
 </html>
