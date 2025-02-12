@@ -15,7 +15,7 @@
             <input type="text" id="username" name="username" required>
             <br>
             <label for="ligue">Liste des ligue</label>
-            <select name="ligue" id="ligue">
+            <select name="ligue" id="ligue" required>
                 <option value="liguefoot">Ligue de football</option>
                 <option value="liguebasket">Ligue de basket</option>
                 <option value="liguevolley">Ligue de volley</option>
