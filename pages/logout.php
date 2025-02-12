@@ -14,7 +14,6 @@
         <br>
         <br>
         <p>Vous pouvez fermer cet onglet ou revenir<br>sur la <a href="../index.php">page d'accueil</a></p> 
-        
     </div>
 </body>
 </html>

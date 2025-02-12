@@ -10,8 +10,10 @@
     <div class="container">
         <h2>Inscription</h2>
         <form id="Inscription" action="#" method="POST">
-            <label for="username">Nom d'utilisateur</label><br>
-            <input type="text" id="username" name="username"/><br>
+            <label for="username">Nom d'utilisateur</label>
+            <br>
+            <input type="text" id="username" name="username" required>
+            <br>
             <label for="ligue">Liste des ligue</label>
             <select name="ligue" id="ligue">
                 <option value="liguefoot">Ligue de football</option>
@@ -19,13 +21,20 @@
                 <option value="liguevolley">Ligue de volley</option>
                 <option value="liguehandball">Ligue de handball</option>
                 <option value="toutesligues">Toutes les ligues</option>
-            </select><br>
-            <label for="email">Adresse e-mail</label><br>
-            <input type="email" id="email" name="email"><br>
-            <label for="password">Mot de passe</label><br>
-            <input type="password" id="password" name="password" required><br>
-            <label for="ppassword">Confirmer le mot de passe</label><br>
-            <input type="password" id="ppassword" name="ppassword" required><br>
+            </select>
+            <br>
+            <label for="email">Adresse e-mail</label>
+            <br>
+            <input type="email" id="email" name="email" required>
+            <br>
+            <label for="password">Mot de passe</label>
+            <br>
+            <input type="password" id="password" name="password" required>
+            <br>
+            <label for="ppassword">Confirmer le mot de passe</label>
+            <br>
+            <input type="password" id="ppassword" name="ppassword" required>
+            <br>
             <div class="remember-me">
                 <div class="left">
                     <input type="checkbox" id="souvenir"/>
