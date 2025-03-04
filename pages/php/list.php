@@ -1,6 +1,5 @@
 <?php
-    include '../template/header.php';
-    print_r($_SESSION);
+    include '../../template/php/ini.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -16,6 +15,9 @@
     </style>
 </head>
 <body>
+    <?php
+        include '../../template/php/header.php';
+    ?>
     <div class="mid">
         <div class="faq">
             <button class="question">FAQ</button>
@@ -28,8 +30,8 @@
             </div>
         </div>
     </div>
+    <?php
+        include '../../template/php/footer.php';
+    ?>
 </body>
 </html>
-<?php
-    include '../template/footer.php';
-?>
