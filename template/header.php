@@ -5,7 +5,7 @@
     <h1>
         <?php
             echo $_SESSION["username"];
-            echo $_SESSION["ligue"];
+            echo $_SESSION["ligue"]; // il manque le SQL pour afficher la ligue et le type d'utilisateur
         ?>
     </h1>
     <nav>

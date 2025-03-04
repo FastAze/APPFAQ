@@ -47,7 +47,7 @@
         </form>
     </div>
     <?php
-        $MDP_H = isset($_POST['password']) ? password_hash($_POST['password']) : '';
+        $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
     ?>
 </body>
 </html>
