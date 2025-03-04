@@ -15,17 +15,6 @@ body {
     background: linear-gradient(135deg, #667eea, #764ba2); /* Applique un dégradé de fond */
 }
 
-h1 {
-    position: absolute; /* Positionne l'élément de manière absolue */
-    top: 150px; /* Positionne à 20px du haut */
-    left: 50%; /* Positionne à 50% de la gauche */
-    transform: translateX(-50%); /* Centre l'élément horizontalement */
-    color: white; /* Définit la couleur du texte */
-    font-size: 2rem; /* Définit la taille de la police */
-    margin-bottom: 1rem; /* Ajoute une marge inférieure de 1 rem */
-    font-size: 75px;
-}
-
 /* Styles pour les conteneurs */
 .container {
     background: white; /* Définit le fond blanc */
@@ -286,4 +275,15 @@ footer {
     color: white; /* Définit la couleur du texte */
     z-index: 10; /* Définit l'ordre de superposition */
     padding: 20px 0; /* Ajoute un padding de 20px en haut et en bas */
+}
+
+#titre-faq {
+    position: absolute; /* Positionne l'élément de manière absolue */
+    top: 150px; /* Positionne à 20px du haut */
+    left: 50%; /* Positionne à 50% de la gauche */
+    transform: translateX(-50%); /* Centre l'élément horizontalement */
+    color: white; /* Définit la couleur du texte */
+    font-size: 2rem; /* Définit la taille de la police */
+    margin-bottom: 1rem; /* Ajoute une marge inférieure de 1 rem */
+    font-size: 75px;
 }

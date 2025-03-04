@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="/pages/css/main.css">
 </head>
 <body>
-    <h1>F.A.Q</h1>
+    <h1 id="titre-faq">F.A.Q</h1>
     <div class="container">
         <h2>Bienvenue sur l'APP F.A.Q</h2>
         <p>Vous avez des questions ?</p>
