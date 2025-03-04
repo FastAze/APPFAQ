@@ -1,3 +1,6 @@
+<?php
+    include 'ini.php';
+?>
 <header>
     <h1>
         <?php

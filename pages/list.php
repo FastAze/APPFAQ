@@ -1,5 +1,6 @@
 <?php
     include '../template/header.php';
+    print_r($_SESSION);
 ?>
 <!DOCTYPE html>
 <html lang="fr">

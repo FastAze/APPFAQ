@@ -31,6 +31,9 @@
             <?php
                 if (isset($_POST['seco']))
                 {
+                    $_SESSION["username"] = $_post['username'];
+                    $_SESSION["password"] = $_post['password'];
+                    $_SESSION["ligue"] = $ligue;
                     header('Location: list.php');
                     // ajouter la vérification de l'identifiant et du mot de passe
                 }

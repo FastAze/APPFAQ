@@ -1,12 +1,7 @@
 <?php
+    session_start();
     $host = 'localhost';
     $dbname = 'm2l';
-    $username = 'root';
-    $password = '';
-    $ligue = 'ligue';
-
-    session_start();
-    $_SESSION["username"] = $username;
-    $_SESSION["password"] = $password;
-    $_SESSION["ligue"] = $ligue;
+    $MDP_BDD = 'root';
+    $password_BDD = '';
 ?>
