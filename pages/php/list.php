@@ -1,5 +1,5 @@
 <?php
-    include '../../template/php/session.php';
+    include '../../template/php/ini.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">

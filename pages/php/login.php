@@ -1,5 +1,5 @@
 <?php
-    include '../../template/php/session.php';
+    include '../../template/php/ini.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -31,11 +31,11 @@
             <?php
                 if (isset($_POST['seco']))
                 {
+                    // Vérifiez les identifiants ici
+                    // Si les identifiants sont corrects, définissez les variables de session
                     $_SESSION["username"] = $_POST['username'];
                     $_SESSION["password"] = $_POST['password'];
-                    $_SESSION["ligue"] = $ligue;
                     header('Location: list.php');
-                    // ajouter la vérification de l'identifiant et du mot de passe
                 }
                 else
                 {
