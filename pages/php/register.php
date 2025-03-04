@@ -47,7 +47,6 @@
             </div>
             <button type="submit" name="inscrire">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
             <?php
-        print_r ($_POST);
                 $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
                 if (isset($_POST['inscrire']))
                 {
@@ -61,13 +60,13 @@
                 {
                     echo "Identifiant ou mot de passe incorrect";
                 }
-?>
+            ?>
             <p>Vous avez un compte ?</p>
             <a href="login.php">login</a>
         </form>
-    </div>
+    </div>    
+    <?php
+        include '../../template/php/footer.php';
+    ?>
 </body>
 </html>
-<?php
-    include '../../template/php/footer.php';
-?>
