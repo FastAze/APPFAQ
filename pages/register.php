@@ -1,22 +1,7 @@
 <?php
     include '../template/ini.php';
 ?>
-<?php
-        print_r ($_POST);
-                $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
-                if (isset($_POST['inscrire']))
-                {
-                    $_SESSION["username"] = $_POST['username'];
-                    $_SESSION["password"] = $_POST['password'];
-                    $_SESSION["ligue"] = $_POST['ligue'];
-                    header('Location: list.php');
-                    // ajouter la vérification de l'identifiant et du mot de passe
-                }
-                else
-                {
-                    echo "Identifiant ou mot de passe incorrect";
-                }
-?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -61,6 +46,22 @@
                 </div>
             </div>
             <button type="submit" name="inscrire">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
+            <?php
+        print_r ($_POST);
+                $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
+                if (isset($_POST['inscrire']))
+                {
+                    $_SESSION["username"] = $_POST['username'];
+                    $_SESSION["password"] = $_POST['password'];
+                    $_SESSION["ligue"] = $_POST['ligue'];
+                    header('Location: list.php');
+                    // ajouter la vérification de l'identifiant et du mot de passe
+                }
+                else
+                {
+                    echo "Identifiant ou mot de passe incorrect";
+                }
+?>
             <p>Vous avez un compte ?</p>
             <a href="login.php">login</a>
         </form>
