@@ -1,3 +1,22 @@
+<?php
+    include '../template/ini.php';
+?>
+<?php
+        print_r ($_POST);
+                $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
+                if (isset($_POST['inscrire']))
+                {
+                    $_SESSION["username"] = $_POST['username'];
+                    $_SESSION["password"] = $_POST['password'];
+                    $_SESSION["ligue"] = $_POST['ligue'];
+                    header('Location: list.php');
+                    // ajouter la vérification de l'identifiant et du mot de passe
+                }
+                else
+                {
+                    echo "Identifiant ou mot de passe incorrect";
+                }
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -9,7 +28,7 @@
 <body>
     <div class="container">
         <h2>Inscription</h2>
-        <form id="Inscription" action="#" method="POST">
+        <form id="Inscription" action="register.php" method="POST">
             <label for="username">Nom d'utilisateur</label>
             <br>
             <input type="text" name="username" required>
@@ -41,14 +60,11 @@
                     <label for="souvenir">Se souvenir de moi</label>
                 </div>
             </div>
-            <button type="submit">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
+            <button type="submit" name="inscrire">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
             <p>Vous avez un compte ?</p>
             <a href="login.php">login</a>
         </form>
     </div>
-    <?php
-        $MDP_H = isset($_POST['password']) ? password_hash($_POST['password']) : '';
-    ?>
 </body>
 </html>
 <?php
