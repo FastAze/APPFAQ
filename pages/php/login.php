@@ -31,6 +31,7 @@
             <?php
                 if (isset($_POST['seco']))
                 {
+
                     // Vérifiez les identifiants ici
                     // Si les identifiants sont corrects, définissez les variables de session
                     $_SESSION["username"] = $_POST['username'];
