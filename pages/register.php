@@ -12,10 +12,10 @@
         <form id="Inscription" action="#" method="POST">
             <label for="username">Nom d'utilisateur</label>
             <br>
-            <input type="text" id="username" name="username" required>
+            <input type="text" name="username" required>
             <br>
             <label for="ligue">Liste des ligue</label>
-            <select name="ligue" id="ligue" required>
+            <select name="ligue" required>
                 <option value="liguefoot">Ligue de football</option>
                 <option value="liguebasket">Ligue de basket</option>
                 <option value="liguevolley">Ligue de volley</option>
@@ -25,15 +25,15 @@
             <br>
             <label for="email">Adresse e-mail</label>
             <br>
-            <input type="email" id="email" name="email" required>
+            <input type="email" name="email" required>
             <br>
             <label for="password">Mot de passe</label>
             <br>
-            <input type="password" id="password" name="password" required>
+            <input type="password" name="password" required>
             <br>
-            <label for="ppassword">Confirmer le mot de passe</label>
+            <label for="password">Confirmer le mot de passe</label>
             <br>
-            <input type="password" id="ppassword" name="ppassword" required>
+            <input type="password" name="ppassword" required>
             <br>
             <div class="remember-me">
                 <div class="left">
@@ -46,6 +46,9 @@
             <a href="login.php">login</a>
         </form>
     </div>
+    <?php
+        $MDP_H = isset($_POST['password']) ? password_hash($_POST['password']) : '';
+    ?>
 </body>
 </html>
 <?php
