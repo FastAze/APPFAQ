@@ -6,11 +6,11 @@
         <?php
             if (isset($_SESSION["username"]))
             {
-                echo $_SESSION["username"];
+                echo '<p class="pseudo">',$_SESSION["username"],'</p>';
             }
             else
             {
-                echo "Utilisateur non connecté";
+                echo '<p class="pseudo">Utilisateur non connecté</p>';
             }
             //echo $_SESSION["ligue"]; il manque le SQL pour afficher la ligue et le type d'utilisateur
         ?>
