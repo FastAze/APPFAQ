@@ -1,3 +1,6 @@
+<?php
+    include '../template/ini.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -24,7 +27,18 @@
                     <label for="souvenir">Se souvenir de moi</label>
                 </div>
             </div>
-            <button type="submit">Se connecter</button><!-- Avec le PHP nous allons vérifier la Connexion et rediriger vers la page appfaq.php-->
+            <button type="submit" name="seco">Se connecter</button>
+            <?php
+                if (isset($_POST['seco']))
+                {
+                    header('Location: list.php');
+                    // ajouter la vérification de l'identifiant et du mot de passe
+                }
+                else
+                {
+                    echo "Identifiant ou mot de passe incorrect";
+                }
+            ?>
             <br>
             <br>
             <div class="inline">

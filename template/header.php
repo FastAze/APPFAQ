@@ -1,7 +1,10 @@
 <header>
-    <?php
-    
-    ?>
+    <h1>
+        <?php
+            echo $_SESSION["username"];
+            echo $_SESSION["ligue"];
+        ?>
+    </h1>
     <nav>
         <ul>
             <li><a href="/pages/list.php">Liste des questions</a></li>
