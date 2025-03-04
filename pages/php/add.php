@@ -1,5 +1,5 @@
 <?php
-    include '../template/header.php';
+    include '../../template/php/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -21,5 +21,5 @@
 </body>
 </html>
 <?php
-    include '../template/footer.php';
+    include '../../template/php/footer.php';
 ?>

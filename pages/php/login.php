@@ -1,5 +1,5 @@
 <?php
-    include '../template/ini.php';
+    include '../../template/php/session.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -53,8 +53,8 @@
             <a href="register.php">S'inscrire</a>
         </form>
     </div>
+    <?php
+        include '../../template/php/footer.php';
+    ?>
 </body>
 </html>
-<?php
-    include '../template/footer.php';
-?>
