@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connexion</title>
-    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../../pages/css/main.css">
 </head>
 <body>
     <div class="container">
@@ -47,7 +47,7 @@
             <br>
             <div class="inline">
                 <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
-                <a href="resetpswd.php">Réinitialiser le mot de passe</a>
+                <a href="/pages/php/login.php">Réinitialiser le mot de passe</a>
             </div>
             <br>
             <p>Vous n'avez pas de compte ?</p>

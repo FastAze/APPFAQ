@@ -1,5 +1,5 @@
 <?php
-    include 'test.php';
+    include 'template/php/path.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -7,7 +7,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Accueil</title>
-    <link rel="stylesheet" href="<?= $chemin ?>/pages/css/main.css">
+    <link rel="stylesheet" href="<?= path ?>/pages/css/main.css">
 </head>
 <body>
     <h1 id="titre-faq">F.A.Q</h1>
@@ -18,9 +18,9 @@
         <br>
         <p>Nous avons des réponses !</p>
         <br>
-        <button onclick="window.location.href='/pages/php/login.php'">Connexion</button>
+        <button onclick="window.location.href='<?= path ?>/pages/php/login.php'">Connexion</button>
         <br>
-        <button onclick="window.location.href='/pages/php/register.php'">Inscription</button>
+        <button onclick="window.location.href='<?= path ?>/pages/php/register.php'">Inscription</button>
         <br>
     </div>
     <?php

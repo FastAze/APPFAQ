@@ -1,5 +1,6 @@
 <?php
     include '../../template/php/ini.php';
+    include '../../template/php/header.php';
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -15,9 +16,6 @@
     </style>
 </head>
 <body>
-    <?php
-        include '../../template/php/header.php';
-    ?>
     <div class="mid">
         <div class="faq">
             <button class="question">FAQ</button>
