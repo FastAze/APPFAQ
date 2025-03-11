@@ -1,3 +1,6 @@
+<?php
+    include 'test.php';
+?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
