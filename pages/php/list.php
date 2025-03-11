@@ -1,7 +1,7 @@
 <?php
     include '../../template/php/ini.php';
     include '../../template/php/header.php';
-?>
+    ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
