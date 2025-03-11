@@ -287,3 +287,8 @@ footer {
     margin-bottom: 1rem; /* Ajoute une marge inférieure de 1 rem */
     font-size: 75px;
 }
+
+.pseudo {
+    color: white;
+    margin-right: 100px;
+}
