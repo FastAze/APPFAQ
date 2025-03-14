@@ -10,24 +10,20 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-    <h1 class="titel-appfaq">F.A.Q</h1>
+    <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
         <h2>Connexion</h2>
         <form id="Connexion" action="login.php" method="POST">
-            <label for="username">Identifiant</label>
+            <label for="username">Pseudo</label>
             <br>
             <input type="text" id="username" name="username" required/>
             <br>
             <label for="password">Mot de passe</label>
             <br>
             <input type="password" id="password" name="password" required>
-            <div class="remember-me">
-                <div class="left">
-                    <input type="checkbox" id="souvenir"/>
-                    <label for="souvenir">Se souvenir de moi</label>
-                </div>
-            </div>
+            <br>
             <button class="btn" type="submit" name="seco">Se connecter</button>
+            <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
             <?php
                 if (isset($_POST['seco']))
                 {
@@ -43,10 +39,6 @@
                     // echo "Identifiant ou mot de passe incorrect";
                 }
             ?>
-            <div class="inline">
-                <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
-                <a href="/pages/php/login.php">Réinitialiser le mot de passe</a>
-            </div>
             <p>Vous n'avez pas de compte ?</p>
             <a href="register.php">S'inscrire</a>
         </form>
