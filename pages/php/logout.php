@@ -9,11 +9,8 @@
 <body>
     <div class="container">
         <h1>Déconnexion</h1>
-        <br>
         <p>Vous êtes désormais déconnecté.</p>
-        <br>
-        <br>
-        <p>Vous pouvez fermer cet onglet ou revenir<br>sur la <a href="../../index.php">page d'accueil</a></p> 
+        <p>Vous pouvez fermer cet onglet ou revenir<br>sur la <a href="../../index.php">page d'accueil.</a></p> 
     </div>  
     <?php
         include '../../template/php/footer.php';

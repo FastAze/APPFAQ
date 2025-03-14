@@ -14,9 +14,9 @@
         <h2>Supprimer un message</h2>
         <form action="#" method="post">
             <!-- Avec le PHP, nous allons afficher les questions des utilisateurs et une checkbox pour les sélectionner. -->
-            <button type="submit">Supprimer</button><!-- Supprime la question de la liste avec le PHP -->
+            <button class="btn" type="submit">Supprimer</button><!-- Supprime la question de la liste avec le PHP -->
         </form>
-        <button type="button" class="cancel-btn" onclick="window.location.href='list.php'">Annuler</button>
+        <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
     </div> 
 </body>
 </html>

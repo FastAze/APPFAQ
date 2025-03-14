@@ -14,9 +14,10 @@
         <h2>Ajouter une question</h2>
         <form action="#" method="post">
             <textarea name="message" placeholder="Entrez votre message" required></textarea>
-            <button type="submit">Enregistrer</button><!-- Ajoute la question à la liste avec le PHP -->
+            <br>
+            <button class="btn" type="submit">Enregistrer</button><!-- Ajoute la question à la liste avec le PHP -->
         </form>
-        <button class="cancel-btn" onclick="window.location.href='list.php'">Annuler</button>
+        <button class="btn" onclick="window.location.href='list.php'">Annuler</button>
     </div>
 </body>
 </html>

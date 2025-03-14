@@ -13,13 +13,11 @@
     <div class="container">
         <h2>Modifier la réponse</h2>
         <form action="#" method="post">
-            <label for="réponses">Réponses</label>
-            <br>
             <textarea name="réponses" id="réponses" placeholder="Réponses" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche la réponse à modifier avec le PHP-->
             <br>
-            <button type="submit">Confirmer les changements</button>
+            <button class="btn" type="submit">Enregistrer</button>
         </form>
-        <button type="button" class="cancel-btn" onclick="window.location.href='list.php'">Annuler</button>
+        <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
     </div>
 </body>
 </html>
