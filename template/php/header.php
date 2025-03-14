@@ -23,8 +23,8 @@
         <a href="../../pages/php/editrep.php">Modifier une réponse</a>
         <a href="../../pages/php/delete.php">Supprimer une question</a>
     </nav>
-    <!-- <form action="../../pages/php/logout.php" method="POST">
-        <button type="submit" class="floating-button" name="deco">Déconnexion</button>
+    <form action="../../pages/php/logout.php" method="POST">
+        <button class="btn" type="submit" class="floating-button" name="deco">Déconnexion</button>
     </form>
     
     <?php
@@ -33,5 +33,5 @@
             session_destroy();
             header('Location: ../../pages/php/logout.php');
         }
-    ?> -->
+    ?>
 </header>
