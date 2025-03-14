@@ -10,10 +10,11 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
         <h2>Connexion</h2>
         <form id="Connexion" action="login.php" method="POST">
-            <label for="username">Identifiant</label>
+            <label for="username">Pseudo</label>
             <br>
             <input type="text" id="username" name="username" required/>
             <br>
@@ -21,13 +22,8 @@
             <br>
             <input type="password" id="password" name="password" required>
             <br>
-            <div class="remember-me">
-                <div class="left">
-                    <input type="checkbox" id="souvenir"/>
-                    <label for="souvenir">Se souvenir de moi</label>
-                </div>
-            </div>
-            <button type="submit" name="seco">Se connecter</button>
+            <button class="btn" type="submit" name="seco">Se connecter</button>
+            <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
             <?php
                 if (isset($_POST['seco']))
                 {
@@ -40,18 +36,10 @@
                 }
                 else
                 {
-                    echo "Identifiant ou mot de passe incorrect";
+                    // echo "Identifiant ou mot de passe incorrect";
                 }
             ?>
-            <br>
-            <br>
-            <div class="inline">
-                <p>Vous ne vous souvenez plus de votre mot de passe ?</p>
-                <a href="/pages/php/login.php">Réinitialiser le mot de passe</a>
-            </div>
-            <br>
-            <p>Vous n'avez pas de compte ?</p>
-            <a href="register.php">S'inscrire</a>
+            <p>Vous n'avez pas de compte : <a href="register.php">S'inscrire</a></p>
         </form>
     </div>
     <?php

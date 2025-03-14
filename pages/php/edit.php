@@ -6,13 +6,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Suppression d'un message</title>
+    <title>Modifier une question / Réponse</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
-<h1 class="titel-appfaq">M2L</h1>
+    <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
-        <h2>Supprimer une question</h2>
+        <h2>Modifier une question / Réponse</h2>
         <form action="edit.php" method="post">
             <?php
                 if (isset($_POST['register']))
@@ -22,11 +22,11 @@
             ?>
             <label for="question">Question :</label>
             <br>
-            <textarea name="question" placeholder="Question" rows="10" cols="60" style="resize: none;" readonly></textarea> <!-- Affiche le message à modifier avec le PHP-->
+            <textarea name="question" placeholder="Question" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
             <br>
             <label for="reponses">Réponse :</label>
             <br>
-            <textarea name="reponses" placeholder="Réponse" rows="10" cols="60" style="resize: none;" readonly></textarea> <!-- Affiche la réponse en lecture seule -->
+            <textarea name="reponses" placeholder="Réponse" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche la réponse à modifier avec le PHP-->
             <br>
             <button class="btn" name="register" type="submit">Enregistrer</button>
             <button type="button" class="btn" onclick="window.location.href='./list.php'">Annuler</button>

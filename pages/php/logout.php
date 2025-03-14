@@ -7,13 +7,11 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
-        <h1>Déconnexion</h1>
-        <br>
-        <p>Vous êtes désormais déconnecté.</p>
-        <br>
-        <br>
-        <p>Vous pouvez fermer cet onglet ou revenir<br>sur la <a href="../../index.php">page d'accueil</a></p> 
+        <h2>Déconnexion</h2>
+        <p>Utilisateur, vous êtes bien déconnecté.</p>
+        <p>Revenir à la page <a href="../../index.php">d'accueil</a>.</p>
     </div>  
     <?php
         include '../../template/php/footer.php';
