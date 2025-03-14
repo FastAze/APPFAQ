@@ -1,7 +1,6 @@
 <?php
     include '../../template/php/ini.php';
 ?>
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -38,7 +37,7 @@
             </select>
             <br>
             <button class="btn" type="submit" name="inscrire">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
-            <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
+            <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
             <?php
                 $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
                 if (isset($_POST['inscrire']))
@@ -55,8 +54,7 @@
                 }
             ?>
         </form>
-        <p>Vous n'avez deja un compte ?</p>
-        <a href="login.php">Se connecter</a>
+        <p>Vous n'avez deja un compte : <a href="login.php">Se connecter</a></p>
     </div>    
     <?php
         include '../../template/php/footer.php';

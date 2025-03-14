@@ -1,9 +1,6 @@
 <?php
     include 'template/php/path.php';
 ?>
-<?php
-    include 'template/php/header.php'
-?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -16,7 +13,7 @@
     <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
         <h2>Accueil</h2>
-        <p class="break-line">Bienvenue sur la FAQ des ligne des sports</p>
+        <p>Bienvenue sur la FAQ des ligne des sports</p>
         <button class="btn" onclick="window.location.href='<?= path ?>/pages/php/login.php'">Connexion</button>
         <button class="btn" onclick="window.location.href='<?= path ?>/pages/php/register.php'">Inscription</button>
     </div>

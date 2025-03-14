@@ -23,7 +23,7 @@
             <input type="password" id="password" name="password" required>
             <br>
             <button class="btn" type="submit" name="seco">Se connecter</button>
-            <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
+            <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
             <?php
                 if (isset($_POST['seco']))
                 {
@@ -39,8 +39,7 @@
                     // echo "Identifiant ou mot de passe incorrect";
                 }
             ?>
-            <p>Vous n'avez pas de compte ?</p>
-            <a href="register.php">S'inscrire</a>
+            <p>Vous n'avez pas de compte : <a href="register.php">S'inscrire</a></p>
         </form>
     </div>
     <?php
