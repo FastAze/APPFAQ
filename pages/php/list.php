@@ -42,7 +42,7 @@
             echo "<td>" . $row['pseudo'] . "</td>";
             echo "<td>" . $row['question'] . "</td>";
             echo "<td>" . $row['reponse'] . "</td>";
-            echo "<td><a href='edit.php?id_faq=" . $row['id_faq'] . "'>Modifier</a> | <a href='delete.php?id_faq=" . $row['id_faq'] . "'>Supprimer</a></td>";
+            echo "<td><div class='action-links'><a href='edit.php?id_faq=" . $row['id_faq'] . "'>Modifier</a><a href='delete.php?id_faq=" . $row['id_faq'] . "'>Supprimer</a></div></td>";
             echo "</tr>";
         }
         echo "</table>";

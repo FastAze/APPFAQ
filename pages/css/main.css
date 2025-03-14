@@ -12,6 +12,12 @@
     font-family: 'TT', sans-serif;
 }
 
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
 body {
     min-height: 100vh;
     background: #0c1022;
@@ -23,11 +29,12 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 20px 10%;
     background: transparent;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 5%;
+    flex-direction: column;
 }
 
 .footer {
@@ -49,19 +56,19 @@ body {
 }
 
 .container {
-    padding: 2rem;
     border-radius: 10px;
     text-align: center;
     animation: fadeIn 0.8s ease-in-out;
     width: auto; /* Au lieu de width: 500px */
     min-width: 300px; /* Définir une largeur minimale */
     max-width: 90%; /* Empêcher que le conteneur soit trop large sur mobile */
-    margin: 120px auto 50px; /* Marge supérieure, centrée horizontalement */
     position: relative; /* Au lieu de absolute */
     background: #0c1022;
     display: inline-block; /* Permet au conteneur de s'adapter au contenu */
     left: 50%;
     transform: translateX(-50%);
+    padding: 1.5rem;
+    margin: 100px auto 40px;
 }
 
 /* Modifier la position du titre pour qu'il ne chevauche pas le conteneur */
@@ -127,11 +134,8 @@ p, label {
     display: inline-flex;
     justify-content: center;
     align-items: center;
-    width: 180px;
-    height: 48px;
     background: yellowgreen;
     border-radius: 40px;
-    font-size: 19px;
     color: #fff;
     text-decoration: none;
     font-weight: 600;
@@ -140,6 +144,9 @@ p, label {
     opacity: 0;
     animation: slideTop 1s ease forwards;
     margin: 10px;
+    width: 150px;
+    height: 42px;
+    font-size: 16px;
 }
 
 .btn::before {
@@ -223,6 +230,8 @@ table {
     border: 2px solid;
     animation: textGradientMove 5s linear infinite;
     background-color: rgba(12, 16, 34, 0.8);
+    display: block;
+    overflow-x: auto;
 }
 
 th, td {
@@ -240,6 +249,23 @@ th {
 
 tr:hover {
     background-color: rgba(255, 255, 255, 0.05);
+}
+
+.titel-appfaq {
+    font-size: 36px;
+    margin-top: 80px;
+}
+
+.action-links {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+
+.action-links a {
+    display: inline-block;
+    padding: 4px 8px;
 }
 
 @keyframes slideTop{
@@ -282,5 +308,131 @@ tr:hover {
     }
     100% {
         background-position: 0% 50%;
+    }
+}
+
+/* Ajouter après toutes les règles CSS existantes */
+
+/* Base responsive pour tous les écrans */
+
+
+@media only screen and (max-width: 480px) {
+    td {
+        min-width: 60px; /* Minimum width for cells */
+    }
+    
+    /* Cellule d'action plus large pour accommoder les deux liens */
+    td:last-child {
+        min-width: 140px;
+    }
+}
+
+/* Media Queries pour différentes résolutions */
+
+/* Petits mobiles (320px-480px) */
+@media only screen and (max-width: 480px) {
+    html {
+        font-size: 14px;
+    }
+    
+    .logo {
+        font-size: 20px;
+    }
+    
+    h2 {
+        font-size: 24px;
+    }
+    
+    .container {
+        padding: 1rem;
+        max-width: 95%;
+    }
+    
+    .btn {
+        width: 130px;
+        height: 38px;
+        font-size: 14px;
+        margin: 7px;
+    }
+}
+
+/* Tablettes (481px-768px) */
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .header {
+        padding: 15px 7%;
+        flex-direction: row;
+    }
+    
+    .titel-appfaq {
+        font-size: 42px;
+        margin-top: 90px;
+    }
+    
+    .container {
+        max-width: 85%;
+    }
+}
+
+/* Petits écrans/Laptops (769px-1024px) */
+@media only screen and (min-width: 769px) and (max-width: 1024px) {
+    .header {
+        padding: 20px 8%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .titel-appfaq {
+        font-size: 48px;
+    }
+    
+    .container {
+        max-width: 80%;
+    }
+    
+    .btn {
+        width: 160px;
+        height: 45px;
+    }
+}
+/* Écrans moyens (1025px-1200px) */
+@media only screen and (min-width: 1025px) and (max-width: 1200px) {
+    .header {
+        padding: 20px 10%;
+        flex-direction: row; /* Assurer que la direction est en ligne */
+        justify-content: space-between; /* Répartir les éléments */
+    }
+    
+    .container {
+        max-width: 70%;
+    }
+}
+
+/* Grands écrans (1201px et plus) */
+@media only screen and (min-width: 1201px) {
+    html {
+        font-size: 18px;
+    }
+    
+    .header {
+        padding: 20px 10%;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .titel-appfaq {
+        font-size: 56px;
+    }
+    
+    .container {
+        max-width: 60%;
+        padding: 2.5rem;
+    }
+    
+    .btn {
+        width: 200px;
+        height: 52px;
+        font-size: 20px;
     }
 }
