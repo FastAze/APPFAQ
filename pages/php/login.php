@@ -1,5 +1,6 @@
 <?php
     include '../../template/php/ini.php';
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -25,18 +26,28 @@
             <button class="btn" type="submit" name="seco">Se connecter</button>
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
             <?php
+            $username = isset($_POST['username'])? $_POST['username'] : '';
+            $password = isset($_POST['password'])? $_POST['password'] : '';
+            $dbh = db_connect();
+            $sql = "select pseudo, mdp
+                    from user_
+                    where pseudo = '$username' and mdp = '$password'";
+            try {
+            $sth = $dbh->prepare($sql);
+            $sth->execute();
+            $rows = $sth->fetch(PDO::FETCH_ASSOC);
+            } catch (PDOException $ex) {
+            die("Erreur lors de la requête SQL : " . $ex->getMessage());
+            }
                 if (isset($_POST['seco']))
                 {
-
-                    // Vérifiez les identifiants ici
-                    // Si les identifiants sont corrects, définissez les variables de session
-                    $_SESSION["username"] = $_POST['username'];
-                    $_SESSION["password"] = $_POST['password'];
-                    header('Location: list.php');
-                }
-                else
-                {
-                    // echo "Identifiant ou mot de passe incorrect";
+                    if ($rows['pseudo'] == $username && $rows['mdp'] == $password) {
+                        $_SESSION["username"] = $_POST['username'];
+                        $_SESSION["password"] = $_POST['password'];
+                        header('Location: list.php');
+                    } else {
+                        echo "Identifiant ou mot de passe incorrect";
+                    }
                 }
             ?>
             <p>Vous n'avez pas de compte : <a href="register.php">S'inscrire</a></p>
