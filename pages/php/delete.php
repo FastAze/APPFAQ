@@ -28,7 +28,7 @@
             <br>
             <textarea name="reponses" placeholder="Réponse" rows="10" cols="60" style="resize: none;" readonly></textarea> <!-- Affiche la réponse en lecture seule -->
             <br>
-            <button class="btn" name="register" type="submit">Enregistrer</button>
+            <button class="btn" name="register" type="submit">Supprimer</button>
             <button type="button" class="btn" onclick="window.location.href='./list.php'">Annuler</button>
         </form>
     </div>
