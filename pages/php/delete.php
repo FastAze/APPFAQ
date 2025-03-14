@@ -10,14 +10,22 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+<h1 class="titel-appfaq">M2L</h1>
     <div class="container">
-        <h2>Supprimer un message</h2>
+        <h2>Supprimer une question</h2>
         <form action="#" method="post">
-            <!-- Avec le PHP, nous allons afficher les questions des utilisateurs et une checkbox pour les sélectionner. -->
-            <button class="btn" type="submit">Supprimer</button><!-- Supprime la question de la liste avec le PHP -->
+            <label for="question">Question</label>
+            <br>
+            <textarea name="question" id="question" placeholder="question" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
+            <br>
+            <label for="réponses">Réponses</label>
+            <br>
+            <textarea name="réponses" id="réponses" placeholder="Réponses" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche la réponse à modifier avec le PHP-->
+            <br>
+            <button class="btn" type="submit">Supprimer</button>
+            <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
         </form>
-        <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
-    </div> 
+    </div>
 </body>
 </html>
 <?php

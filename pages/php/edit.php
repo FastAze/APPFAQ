@@ -6,7 +6,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier le message</title>
+    <title>Modifier une question / Répondre</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
@@ -14,9 +14,9 @@
     <div class="container">
         <h2>Modifier une question / Répondre</h2>
         <form action="#" method="post">
-            <label for="message">Message</label>
+            <label for="question">Question</label>
             <br>
-            <textarea name="message" id="message" placeholder="Message" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
+            <textarea name="question" id="question" placeholder="question" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
             <br>
             <label for="réponses">Réponses</label>
             <br>
