@@ -11,7 +11,7 @@
     <div class="container">
         <h2>Déconnexion</h2>
         <p>Utilisateur, vous êtes bien déconnecté.</p>
-        <a href="../../index.php">revenir a la page d'accueil.</a> 
+        <p>Revenir à la page <a href="../../index.php">d'accueil</a>.</p>
     </div>  
     <?php
         include '../../template/php/footer.php';

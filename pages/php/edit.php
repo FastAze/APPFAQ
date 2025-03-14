@@ -6,24 +6,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Modifier une question / Répondre</title>
+    <title>Modifier une question / Réponse</title>
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
     <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
-        <h2>Modifier une question / Répondre</h2>
-        <form action="#" method="post">
-            <label for="question">Question</label>
+        <h2>Modifier une question / Réponse</h2>
+        <form action="edit.php" method="post">
+            <?php
+                if (isset($_POST['register']))
+                {
+                    header('Location: ./list.php');
+                }
+            ?>
+            <label for="question">Question :</label>
             <br>
-            <textarea name="question" id="question" placeholder="question" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
+            <textarea name="question" placeholder="Question" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche le message à modifier avec le PHP-->
             <br>
-            <label for="réponses">Réponses</label>
+            <label for="reponses">Réponse :</label>
             <br>
-            <textarea name="réponses" id="réponses" placeholder="Réponses" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche la réponse à modifier avec le PHP-->
+            <textarea name="reponses" placeholder="Réponse" rows="10" cols="60" style="resize: none;" required></textarea> <!-- Affiche la réponse à modifier avec le PHP-->
             <br>
-            <button class="btn" type="submit">Enregistrer</button>
-            <button type="button" class="btn" onclick="window.location.href='list.php'">Annuler</button>
+            <button class="btn" name="register" type="submit">Enregistrer</button>
+            <button type="button" class="btn" onclick="window.location.href='./list.php'">Annuler</button>
         </form>
     </div>
 </body>
