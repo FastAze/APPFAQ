@@ -352,7 +352,7 @@ p, label {
     }
 }
 
-input {
+input, select {
     margin: 10px;
 }
 
