@@ -13,11 +13,10 @@
     <link rel="stylesheet" href="<?= path ?>/pages/css/main.css">
 </head>
 <body>
-    <h1 class="titel-appfaq">F.A.Q</h1>
+    <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
-        <h2>Bienvenue sur l'APP F.A.Q</h2>
-        <p class="break-line">Vous avez des questions ?</p>
-        <p>Nous avons des réponses !</p>
+        <h2>Accueil</h2>
+        <p class="break-line">Bienvenue sur la FAQ des ligne des sports</p>
         <button class="btn" onclick="window.location.href='<?= path ?>/pages/php/login.php'">Connexion</button>
         <button class="btn" onclick="window.location.href='<?= path ?>/pages/php/register.php'">Inscription</button>
     </div>

@@ -16,7 +16,6 @@ body {
     min-height: 100vh;
     background: #0c1022;
     color: #fff;
-    /* cursor:none; */
 }
 
 .header {
@@ -62,12 +61,11 @@ body {
     font-weight: 600;
     border-radius: 20px;
     color: #fff;
-    /* Modification ici: séparation des propriétés de transition et d'animation */
     transition: color 0.5s ease, text-shadow 0.5s ease, background-position 0.5s ease;
-    opacity: 0; /* Commence invisible */
-    transform: translateX(-50px); /* Position initiale décalée */
-    animation: revealNavItem 0.6s ease forwards; /* Animation au chargement seulement */
-    animation-fill-mode: forwards; /* Garantit que l'état final est conservé */
+    opacity: 0;
+    transform: translateX(-50px);
+    animation: revealNavItem 0.6s ease forwards;
+    animation-fill-mode: forwards;
 }
 
 .navbar a:nth-child(1) {
@@ -109,9 +107,7 @@ body {
     background-clip: text;
     color: transparent;
     text-shadow: 0 0 10px rgba(255, 0, 102, 0.4), 0 0 10px rgba(51, 204, 255, 0.4);
-    /* UNIQUEMENT l'animation du gradient au survol */
     animation: textGradientMove 5s linear infinite;
-    /* Ne pas modifier l'opacité ni la transformation au survol */
     opacity: 1; 
     transform: translateX(0);
 }
@@ -164,13 +160,12 @@ body {
     background: linear-gradient(45deg, #f06, #3cf, #f06);
     background-size: 200%;
     background-position: 0 0;
-    border-radius: 12px; /* Doit correspondre au border-radius du conteneur */
+    border-radius: 12px;
     z-index: -1;
     filter: blur(8px);
     transition: 0.5s ease;
 }
 
-/* Masque l'intérieur du dégradé pour ne garder que la bordure */
 .container::after {
     content: '';
     position: absolute;
@@ -178,18 +173,15 @@ body {
     left: 0;
     right: 0;
     bottom: 0;
-    border-radius: 10px; /* Légèrement plus petit que ::before */
-    background: #0c1022; /* Même fond que le conteneur */
+    border-radius: 10px;
+    background: #0c1022;
     z-index: -1;
 }
 
-/* Animation au survol */
 .container:hover::before {
     background-position: 100% 0;
 }
 
-
-/* Animation manquante pour fadeIn */
 @keyframes fadeIn {
     0% {
         opacity: 0;
@@ -362,7 +354,7 @@ a {
     text-decoration: none;
     font-weight: 600;
     transition: color 0.5s ease, text-shadow 0.5s ease;
-    padding-bottom: 2px; /* Espace pour la ligne */
+    padding-bottom: 2px;
 }
 
 a::after {
@@ -375,12 +367,12 @@ a::after {
     background: linear-gradient(45deg, #f06, #3cf, #f06);
     background-size: 200%;
     animation: textGradientMove 5s linear infinite;
-    opacity: 0.7; /* Légèrement transparent pour un effet plus subtil */
+    opacity: 0.7;
     border-radius: 30px;
 }
 
 a:hover::after {
-    opacity: 1; /* Ligne plus visible au survol */
-    filter: blur(1px); /* Léger effet de lueur au survol */
+    opacity: 1;
+    filter: blur(1px);
     border-radius: 30px;
 }
