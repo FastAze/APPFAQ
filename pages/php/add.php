@@ -10,14 +10,15 @@
     <link rel="stylesheet" href="../css/main.css">
 </head>
 <body>
+    <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
         <h2>Ajouter une question</h2>
         <form action="#" method="post">
             <textarea name="message" placeholder="Entrez votre message" required></textarea>
             <br>
             <button class="btn" type="submit">Enregistrer</button><!-- Ajoute la question à la liste avec le PHP -->
+            <button class="btn" onclick="window.location.href='list.php'">Annuler</button>
         </form>
-        <button class="btn" onclick="window.location.href='list.php'">Annuler</button>
     </div>
 </body>
 </html>

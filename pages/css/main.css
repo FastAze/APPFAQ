@@ -124,30 +124,31 @@ body {
     }
 }
 
-.titel-appfaq {
-    position: absolute;
-    top: 150px;
-    left: 50%;
-    transform: translateX(-50%);
-    color: white;
-    font-size: 2rem;
-    margin-bottom: 700px;
-    font-size: 56px;
-    animation: fadeIn 0.8s ease-in-out;
-}
-
 .container {
     padding: 2rem;
     border-radius: 10px;
     text-align: center;
     animation: fadeIn 0.8s ease-in-out;
-    width: 500px;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    align-items: center;
+    width: auto; /* Au lieu de width: 500px */
+    min-width: 300px; /* Définir une largeur minimale */
+    max-width: 90%; /* Empêcher que le conteneur soit trop large sur mobile */
+    margin: 120px auto 50px; /* Marge supérieure, centrée horizontalement */
+    position: relative; /* Au lieu de absolute */
     background: #0c1022;
+    display: inline-block; /* Permet au conteneur de s'adapter au contenu */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Modifier la position du titre pour qu'il ne chevauche pas le conteneur */
+.titel-appfaq {
+    position: relative;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-top: 100px;
+    color: white;
+    font-size: 56px;
+    animation: fadeIn 0.8s ease-in-out;
 }
 
 .container::before {
@@ -375,4 +376,32 @@ a:hover::after {
     opacity: 1;
     filter: blur(1px);
     border-radius: 30px;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+    overflow: hidden;
+    border-radius: 10px;
+    border: 2px solid;
+    animation: textGradientMove 5s linear infinite;
+    background-color: rgba(12, 16, 34, 0.8);
+}
+
+th, td {
+    padding: 12px 10px;
+    text-align: left;
+    border: 2px solid;
+    text-align: center;
+}
+
+th {
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+tr:hover {
+    background-color: rgba(255, 255, 255, 0.05);
 }
