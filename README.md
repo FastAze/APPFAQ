@@ -8,9 +8,7 @@ Un site web codé en PHP et css composé d'une foire aux questions
 
 ## Membres : 
 -[Sylvain HONTANS](https://github.com/Hontans)  
--[Baptiste CHAILLOU](https://github.com/FastAze)  
--[Mathis BOURDIL](https://github.com/Mathis-Dev25)  
--[Landry ALLARD](https://github.com/LandryAld)   
+-[Baptiste CHAILLOU](https://github.com/FastAze)    
 
 ## Description du contenu : 
 -  F.A.Q  
