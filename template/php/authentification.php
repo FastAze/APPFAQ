@@ -113,7 +113,7 @@ if (!function_exists('getFaqMessages')) {
                     AND user_.id_ligue = ligue.id_ligue
                     ORDER BY faq.id_faq DESC";
             $sth = $dbh->prepare($sql);
-        } elseif (isModerator($userType)) { // Admin - seulement sa ligue
+        } else { // Moderator ou User - seulement leur ligue
             $sql = "SELECT faq.id_faq, user_.pseudo, faq.question, faq.reponse, ligue.lib_ligue, user_.id_ligue
                     FROM faq, user_, ligue
                     WHERE faq.id_user = user_.id_user
@@ -122,13 +122,6 @@ if (!function_exists('getFaqMessages')) {
                     ORDER BY faq.id_faq DESC";
             $sth = $dbh->prepare($sql);
             $sth->bindParam(':userLigue', $userLigue, PDO::PARAM_INT);
-        } else { // Utilisateur simple - toutes les questions (affichage seulement)
-            $sql = "SELECT faq.id_faq, user_.pseudo, faq.question, faq.reponse, ligue.lib_ligue, user_.id_ligue
-                    FROM faq, user_, ligue
-                    WHERE faq.id_user = user_.id_user
-                    AND user_.id_ligue = ligue.id_ligue
-                    ORDER BY faq.id_faq DESC";
-            $sth = $dbh->prepare($sql);
         }
         
         try {
