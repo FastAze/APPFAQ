@@ -18,13 +18,13 @@ Un site web codé en PHP et css composé d'une foire aux questions
 -  Déconnexion  
 -  Créer un compte  
 -  Poser une question  
--  Supprimer une question (voir commentaire)
--  Supprimer une résponse (voir commentaire)
+-  Supprimer une question
+-  Supprimer une résponse
 -  Répondre à une question  
 -  Voir la liste des questions  
 -  Réinitialisation du mot de passe 
--  Modifier une réponse (voir commentaire)
--  Modifier une question (voir commentaire)
+-  Modifier une réponse
+-  Modifier une question 
 -  Sitemap  
 -  Modèle logique de données (MLD)  
 -  Modèle conceptuel de données (MCD)  
@@ -35,3 +35,11 @@ Un site web codé en PHP et css composé d'une foire aux questions
 - Nous avons utilisé le logiciel Looping pour concevoir le Modèle Conceptuel de Données (MCD), ce qui nous a permis de générer un script SQL. Par la suite, nous l'avons intégré dans PHPMyAdmin pour créer la base de données ainsi que le Modèle Logique de Données (MLD).
 
 ## Utilisateur et Mot de passe : 
+- Utilisateur (Type : User) : bob  
+-  Mot de passe : Password1  
+
+-  Utilisateur (Type : Administrateur) : spiderman  
+-  Mot de passe : Password3
+
+-  Utilisateur (Type : Super-Administrateur) : batman  
+-  Mot de passe : Password2
