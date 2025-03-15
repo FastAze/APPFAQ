@@ -11,20 +11,28 @@
     <h1>
 
         <?php
-            $username = isset($_POST['username'])? $_POST['username'] : '';
-            $dbh = db_connect();
-                    $sql = "select lib_ligue
-                    from ligue, user_
-                    where ligue.id_ligue = user_.id_ligue
-                    and user_.pseudo = '$username'";
-            try {
-                $sth = $dbh->prepare($sql);
-                $sth->execute();
-                $userinfo = $sth->fetch(PDO::FETCH_ASSOC);
-            } catch (PDOException $ex) {
-                die("Erreur lors de la requête SQL : " . $ex->getMessage());
+            if(isset($_SESSION["username"])) {
+                $username = $_SESSION["username"];
+                $dbh = db_connect();
+                $sql = "SELECT lib_ligue
+                        FROM ligue, user_
+                        WHERE ligue.id_ligue = user_.id_ligue
+                        AND user_.pseudo = :username";
+                try {
+                    $sth = $dbh->prepare($sql);
+                    $sth->bindParam(':username', $username, PDO::PARAM_STR);
+                    $sth->execute();
+                    $userinfo = $sth->fetch(PDO::FETCH_ASSOC);
+                    
+                    if($userinfo && isset($userinfo['lib_ligue'])) {
+                        echo '<p>Connecté en tant que '. $username . ' de la ' . $userinfo['lib_ligue'] . '</p>';
+                    } else {
+                        echo '<p>Connecté en tant que '. $username . '</p>';
+                    }
+                } catch (PDOException $ex) {
+                    die("Erreur lors de la requête SQL : " . $ex->getMessage());
+                }
             }
-                echo '<p>Connecter en tant que '. $_SESSION["username"] . ' de la ' . $userinfo . '</p>';
         ?>
 
     </h1>
