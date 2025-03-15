@@ -1,6 +1,16 @@
 <?php
     include '../../template/php/ini.php';
     include '../../template/php/header.php';
+    include '../../template/php/authentification.php';
+    
+    $dbh = db_connect();
+    
+    // Vérifier si l'utilisateur est connecté
+    redirectToLogin();
+    
+    // Récupérer les informations de l'utilisateur
+    $userInfo = getUserInfo($dbh, $_SESSION["username"]);
+    $userType = $userInfo['lib_usertype'];
 ?>
 
 <!DOCTYPE html>
@@ -17,25 +27,20 @@
     <h2>Liste des questions</h2>
 
     <?php
-        $dbh = db_connect();
-        $sql = "select id_faq, pseudo, question, reponse
-        from faq, user_
-        where faq.id_user = user_.id_user";
-        try {
-        $sth = $dbh->prepare($sql);
-        $sth->execute();
-        $rows = $sth->fetchAll(PDO::FETCH_ASSOC);
-        } catch (PDOException $ex) {
-        die("Erreur lors de la requête SQL : " . $ex->getMessage());
-        }
-
+        // Récupérer la liste des messages
+        $rows = getFaqMessages($dbh, $userInfo);
+        
         echo "<table>";
         echo "<tr>";
         echo "<th>NR</th>";
         echo "<th>Auteur</th>";
         echo "<th>Question</th>";
         echo "<th>Réponse</th>";
-        echo "<th>Actions</th>";
+        echo "<th>Ligue</th>";
+        // N'afficher la colonne Actions que pour les utilisateurs autorisés
+        if (isAdmin($userType) || isModerator($userType)) {
+            echo "<th>Actions</th>";
+        }
         echo "</tr>";
 
         foreach ($rows as $row) {
@@ -44,7 +49,17 @@
             echo "<td>" . $row['pseudo'] . "</td>";
             echo "<td>" . $row['question'] . "</td>";
             echo "<td>" . $row['reponse'] . "</td>";
-            echo "<td><div class='action-links'><a href='edit.php?id_faq=" . $row['id_faq'] . "'>Modifier</a><a href='delete.php?id_faq=" . $row['id_faq'] . "'>Supprimer</a></div></td>";
+            echo "<td>" . $row['lib_ligue'] . "</td>";
+            
+            // Afficher les actions uniquement pour les admins/modérateurs autorisés
+            if (canEditMessage($userInfo, $row['id_ligue'])) {
+                echo "<td><div class='action-links'>";
+                echo "<a href='edit.php?id_faq=" . $row['id_faq'] . "'>Modifier</a>";
+                echo "<a href='delete.php?id_faq=" . $row['id_faq'] . "'>Supprimer</a>";
+                echo "</div></td>";
+            } elseif (isModerator($userType)) {
+                echo "<td>Pas autorisé</td>";
+            }
             echo "</tr>";
         }
         
