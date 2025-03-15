@@ -28,19 +28,17 @@
             <?php
             $username = isset($_POST['username'])? $_POST['username'] : '';
             $password = isset($_POST['password'])? $_POST['password'] : '';
-            $dbh = db_connect();
-            $sql = "select pseudo, mdp
-                    from user_
-                    where pseudo = '$username' and mdp = '$password'";
-            try {
-            $sth = $dbh->prepare($sql);
-            $sth->execute();
-            $rows = $sth->fetch(PDO::FETCH_ASSOC);
-            } catch (PDOException $ex) {
-            die("Erreur lors de la requête SQL : " . $ex->getMessage());
-            }
                 if (isset($_POST['seco']))
                 {
+                    $dbh = db_connect();
+                    $sql = "select pseudo, mdp
+                            from user_
+                            where pseudo = '$username' 
+                            and mdp = '$password'";
+                    try {
+                    $sth = $dbh->prepare($sql);
+                    $sth->execute();
+                    $rows = $sth->fetch(PDO::FETCH_ASSOC);
                     if ($rows['pseudo'] == $username && $rows['mdp'] == $password) {
                         $_SESSION["username"] = $_POST['username'];
                         $_SESSION["password"] = $_POST['password'];
@@ -48,11 +46,15 @@
                     } else {
                         echo "Identifiant ou mot de passe incorrect";
                     }
+                    } 
+                    catch (PDOException $ex) {
+                    die("Erreur lors de la requête SQL : " . $ex->getMessage());
+                    }
                 }
             ?>
             <p>Vous n'avez pas de compte : <a href="register.php">S'inscrire</a></p>
         </form>
-    </div>
+        </div>
     <?php
         include '../../template/php/footer.php';
     ?>
