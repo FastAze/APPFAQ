@@ -66,7 +66,7 @@
                 if (isset($_POST['inscrire']))
                 {
                     $dbh = db_connect();
-                    $sql = "insert into user_ (pseudo, mail, mdp, id_ligue, id_usertype) values ('$username', '$email', '$MDP_H', '$id_ligue', 1)";
+                    $sql = "insert into user_ (pseudo, mail, mdp, id_ligue, id_usertype) values ('$username', '$email', '$MDP_H', '$id_ligue', 3)";
                     try {
                     $sth = $dbh->prepare($sql);
                     $sth->execute();
