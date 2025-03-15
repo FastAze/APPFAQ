@@ -2,6 +2,7 @@
     include '../../template/php/ini.php';
     session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -39,6 +40,7 @@
             <br>
             <button class="btn" type="submit" name="inscrire">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
+
             <?php
                 $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
                 $username = isset($_POST['username'])? $_POST['username'] : '';
@@ -63,8 +65,7 @@
                         $id_ligue = 5;
                 }
 
-                if (isset($_POST['inscrire']))
-                {
+                if (isset($_POST['inscrire'])) {
                     $dbh = db_connect();
                     $sql = "insert into user_ (pseudo, mail, mdp, id_ligue, id_usertype) values ('$username', '$email', '$MDP_H', '$id_ligue', 3)";
                     try {
@@ -76,11 +77,14 @@
                     header('Location: list.php');
                 }
             ?>
+
         </form>
         <p>Vous n'avez deja un compte : <a href="login.php">Se connecter</a></p>
-    </div>    
+    </div>
+
     <?php
         include '../../template/php/footer.php';
     ?>
+    
 </body>
 </html>
