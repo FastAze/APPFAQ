@@ -2,6 +2,7 @@
     include '../../template/php/ini.php';
     session_start();
 ?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,9 +26,11 @@
             <br>
             <button class="btn" type="submit" name="seco">Se connecter</button>
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
+
             <?php
             $username = isset($_POST['username'])? $_POST['username'] : '';
             $password = isset($_POST['password'])? $_POST['password'] : '';
+
                 if (isset($_POST['seco']))
                 {
                     $dbh = db_connect();
@@ -39,6 +42,7 @@
                     $sth = $dbh->prepare($sql);
                     $sth->execute();
                     $rows = $sth->fetch(PDO::FETCH_ASSOC);
+
                     if ($rows['pseudo'] == $username && $rows['mdp'] == $password) {
                         $_SESSION["username"] = $_POST['username'];
                         $_SESSION["password"] = $_POST['password'];
@@ -46,17 +50,19 @@
                     } else {
                         echo "Identifiant ou mot de passe incorrect";
                     }
-                    } 
-                    catch (PDOException $ex) {
+                    } catch (PDOException $ex) {
                     die("Erreur lors de la requête SQL : " . $ex->getMessage());
                     }
                 }
             ?>
+
             <p>Vous n'avez pas de compte : <a href="register.php">S'inscrire</a></p>
         </form>
         </div>
+
     <?php
         include '../../template/php/footer.php';
     ?>
+
 </body>
 </html>

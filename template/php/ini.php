@@ -12,17 +12,12 @@
             $user = 'root';
             $password = '';
 
-            try
-            {
+            try{
                 $dbh = new PDO($dsn, $user, $password, array(PDO::MYSQL_ATTR_INIT_COMMAND => "SET NAMES utf8"));
                 $dbh->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            }
-            
-            catch (PDOException $ex)
-            {
+            } catch (PDOException $ex){
                 die("Erreur lors de la connexion SQL : " . $ex->getMessage());
             }
-            
             return $dbh;
         }
     }
