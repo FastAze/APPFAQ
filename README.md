@@ -20,7 +20,6 @@ Un site web codé en PHP et css composé d'une foire aux questions
 -  Supprimer une résponse
 -  Répondre à une question  
 -  Voir la liste des questions  
--  Réinitialisation du mot de passe 
 -  Modifier une réponse
 -  Modifier une question 
 -  Sitemap  
@@ -30,8 +29,8 @@ Un site web codé en PHP et css composé d'une foire aux questions
 -  Interactions homme-machine (IHM)  
 -  Documentation
 ## Procédure d'installation du Projet : 
-- Nous avons utilisé le logiciel Looping pour concevoir le Modèle Conceptuel de Données (MCD), ce qui nous a permis de générer un script SQL. Par la suite, nous l'avons intégré dans PHPMyAdmin pour créer la base de données ainsi que le Modèle Logique de Données (MLD).
-
+- Cloner le repo GitHub sur votre serveur web.
+-  Dans le dossier /doc/mpd du repo, exécuter le script SQL pour créer la base de données nommée m2l (respecter le nom).
 ## Utilisateur et Mot de passe : 
 - Utilisateur (Type : User) : bob  
 -  Mot de passe : Password1  
