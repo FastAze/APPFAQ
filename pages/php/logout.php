@@ -12,9 +12,11 @@
         <h2>Déconnexion</h2>
         <p>Utilisateur, vous êtes bien déconnecté.</p>
         <p>Revenir à la page <a href="../../index.php">d'accueil</a>.</p>
-    </div>  
+    </div>
+
     <?php
         include '../../template/php/footer.php';
     ?>
+    
 </body>
 </html>
