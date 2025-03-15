@@ -31,7 +31,10 @@
     <?php
         if (isset($_POST['deco']))
         {
+            session_start();
+            session_unset();
             session_destroy();
+            setcookie(session_name(),"",time()-3600);
             header('Location: ' . $base_url . '/pages/php/logout.php');
         }
     ?>
