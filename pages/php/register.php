@@ -1,5 +1,6 @@
 <?php
     include '../../template/php/ini.php';
+    session_start();
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -40,17 +41,39 @@
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
             <?php
                 $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
+                $username = isset($_POST['username'])? $_POST['username'] : '';
+                $email = isset($_POST['email'])? $_POST['email'] : '';
+                $ligue = isset($_POST['ligue'])? $_POST['ligue'] : '';
+
+                $id_ligue = 1;
+                switch($ligue) {
+                    case 'liguefoot':
+                        $id_ligue = 1;
+                        break;
+                    case 'liguebasket':
+                        $id_ligue = 2;
+                        break;
+                    case 'liguevolley':
+                        $id_ligue = 3;
+                        break;
+                    case 'liguehandball':
+                        $id_ligue = 4;
+                        break;
+                    default:
+                        $id_ligue = 5;
+                }
+
                 if (isset($_POST['inscrire']))
                 {
-                    $_SESSION["username"] = $_POST['username'];
-                    $_SESSION["password"] = $_POST['password'];
-                    $_SESSION["ligue"] = $_POST['ligue'];
+                    $dbh = db_connect();
+                    $sql = "insert into user_ (pseudo, mail, mdp, id_ligue, id_usertype) values ('$username', '$email', '$MDP_H', '$id_ligue', 3)";
+                    try {
+                    $sth = $dbh->prepare($sql);
+                    $sth->execute();
+                    } catch (PDOException $ex) {
+                    die("Erreur lors de la requête SQL : " . $ex->getMessage());
+                    }
                     header('Location: list.php');
-                    // ajouter la vérification de l'identifiant et du mot de passe
-                }
-                else
-                {
-                    // echo "Identifiant ou mot de passe incorrect";
                 }
             ?>
         </form>
