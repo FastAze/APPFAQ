@@ -5,26 +5,20 @@
     
     $dbh = db_connect();
     
-    // Vérifier si l'utilisateur est connecté
     redirectToLogin();
     
-    // Récupérer les informations de l'utilisateur
     $userInfo = getUserInfo($dbh, $_SESSION["username"]);
     
-    // Récupérer la question à supprimer
     if (isset($_GET['id_faq'])) {
         $id_faq = $_GET['id_faq'];
         $question = getMessageInfo($dbh, $id_faq);
         
-        // Vérifier les permissions
         $canDelete = canEditMessage($userInfo, $question['id_ligue']);
     }
     
-    // Traitement de la suppression
     if (isset($_POST['delete'])) {
         $id_faq = $_POST['id_faq'];
         
-        // Vérifier à nouveau les permissions
         $checkQuestion = getMessageInfo($dbh, $id_faq);
         $canDelete = canEditMessage($userInfo, $checkQuestion['id_ligue']);
         

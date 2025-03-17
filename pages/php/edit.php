@@ -5,29 +5,23 @@
     
     $dbh = db_connect();
     
-    // Vérifier si l'utilisateur est connecté
     redirectToLogin();
     
-    // Récupérer les informations de l'utilisateur
     $userInfo = getUserInfo($dbh, $_SESSION["username"]);
     
-    // Récupérer la question à modifier
     if (isset($_GET['id_faq'])) {
         $id_faq = $_GET['id_faq'];
         $question = getMessageInfo($dbh, $id_faq);
         
-        // Vérifier les permissions
         $canEdit = canEditMessage($userInfo, $question['id_ligue']);
     }
     
-    // Traitement de la modification
     if (isset($_POST['update'])) {
         $id_faq = $_POST['id_faq'];
         $questionText = htmlspecialchars($_POST['question']);
         $reponse = htmlspecialchars($_POST['reponse']);
         $currentDate = date('Y-m-d H:i:s');
         
-        // Vérifier à nouveau les permissions
         $checkQuestion = getMessageInfo($dbh, $id_faq);
         $canEdit = canEditMessage($userInfo, $checkQuestion['id_ligue']);
         

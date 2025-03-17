@@ -5,10 +5,8 @@
     
     $dbh = db_connect();
     
-    // Vérifier si l'utilisateur est connecté
     redirectToLogin();
     
-    // Récupérer les informations de l'utilisateur
     $userInfo = getUserInfo($dbh, $_SESSION["username"]);
     $userType = $userInfo['lib_usertype'];
 ?>
@@ -27,7 +25,6 @@
     <h2>Liste des questions</h2>
 
     <?php
-        // Récupérer la liste des messages
         $rows = getFaqMessages($dbh, $userInfo);
         
         echo "<table>";
@@ -37,7 +34,6 @@
         echo "<th>Question</th>";
         echo "<th>Réponse</th>";
         echo "<th>Ligue</th>";
-        // N'afficher la colonne Actions que pour les utilisateurs autorisés
         if (isAdmin($userType) || isModerator($userType)) {
             echo "<th>Actions</th>";
         }
@@ -51,7 +47,6 @@
             echo "<td>" . $row['reponse'] . "</td>";
             echo "<td>" . $row['lib_ligue'] . "</td>";
             
-            // Afficher les actions uniquement pour les admins/modérateurs autorisés
             if (canEditMessage($userInfo, $row['id_ligue'])) {
                 echo "<td><div class='action-links'>";
                 echo "<a href='edit.php?id_faq=" . $row['id_faq'] . "'>Modifier</a>";

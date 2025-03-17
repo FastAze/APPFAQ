@@ -38,7 +38,7 @@
                 <option value="toutesligues">Toutes les ligues</option>
             </select>
             <br>
-            <button class="btn" type="submit" name="inscrire">S'inscrire</button><!-- Avec le PHP, nous allons vérifier la création du compte et rediriger vers la page login.php-->
+            <button class="btn" type="submit" name="inscrire">S'inscrire</button>
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
 
             <?php

@@ -34,8 +34,6 @@
                         
                         if ($user) {
                             $userId = $user['id_user'];
-                            
-                            // Insérer la nouvelle question
                             $insertSql = "INSERT INTO faq (question, dat_question, id_user) 
                                         VALUES ('$question', '$currentDate', '$userId')";
                             $stmt = $dbh->prepare($insertSql);
