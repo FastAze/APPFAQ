@@ -28,37 +28,37 @@
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
 
             <?php
-            $username = isset($_POST['username'])? $_POST['username'] : '';
-            $password = isset($_POST['password'])? $_POST['password'] : '';
+            if (isset($_POST['seco'])) {
+                $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '';
+                $password = isset($_POST['password']) ? $_POST['password'] : '';
 
-                if (isset($_POST['seco']))
-                {
+                if (!empty($username) && !empty($password)) {
                     $dbh = db_connect();
-                    $sql = "select pseudo, mdp
-                            from user_
-                            where pseudo = '$username' 
-                            and mdp = '$password'";
+                    
                     try {
-                    $sth = $dbh->prepare($sql);
-                    $sth->execute();
-                    $rows = $sth->fetch(PDO::FETCH_ASSOC);
-
-                    if ($rows['pseudo'] == $username && $rows['mdp'] == $password) {
-                        $_SESSION["username"] = $_POST['username'];
-                        $_SESSION["password"] = $_POST['password'];
-                        header('Location: list.php');
-                    } else {
-                        echo "Identifiant ou mot de passe incorrect";
-                    }
+                        $sql = "SELECT pseudo, mdp FROM user_ WHERE pseudo = :username";
+                        $sth = $dbh->prepare($sql);
+                        $sth->bindParam(':username', $username, PDO::PARAM_STR);
+                        $sth->execute();
+                        $user = $sth->fetch(PDO::FETCH_ASSOC);
+                        
+                        if ($user && password_verify($password, $user['mdp'])) {
+                            $_SESSION["username"] = $username;
+                            header('Location: list.php');
+                            exit();
+                        } else {
+                            echo "<p style='color: red;'>Identifiant ou mot de passe incorrect</p>";
+                        }
                     } catch (PDOException $ex) {
-                    die("Erreur lors de la requête SQL : " . $ex->getMessage());
+                        die();
                     }
                 }
+            }
             ?>
 
             <p>Vous n'avez pas de compte : <a href="register.php">S'inscrire</a></p>
         </form>
-        </div>
+    </div>
 
     <?php
         include '../../template/php/footer.php';
