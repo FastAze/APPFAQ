@@ -50,7 +50,7 @@
                             echo "<p style='color: red;'>Identifiant ou mot de passe incorrect</p>";
                         }
                     } catch (PDOException $ex) {
-                        die("Erreur lors de la requête SQL : " . $ex->getMessage());
+                        die();
                     }
                 }
             }
