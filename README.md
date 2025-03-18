@@ -30,7 +30,8 @@ Un site web codé en PHP et css composé d'une foire aux questions
 -  Documentation
 ## Procédure d'installation du Projet : 
 - Cloner le repo GitHub sur votre serveur web.
--  Dans le dossier /doc/mpd du repo, exécuter le script SQL pour créer la base de données nommée m2l (respecter le nom).
+- Récupérer le fichier /doc/mpd/m2l.sql du repo, exécuter le script SQL pour créer la base de données nommée m2l (respecter le nom).
+- Si vous vouler changer le type d'utilisateur aller dans PHPmyadmin et sur la table user_ et modifier le champ id_usertype de l'utilisateur que vous souéter.
 ## Utilisateur et Mot de passe : 
 - Utilisateur (Type : User) : bob  
 -  Mot de passe : Password1  
