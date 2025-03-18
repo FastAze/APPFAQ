@@ -1,5 +1,7 @@
 <?php
+    // Inclusion du fichier de configuration
     include '../../template/php/ini.php';
+    // Démarrage de la session
     session_start();
 ?>
 
@@ -15,6 +17,7 @@
     <h1 class="titel-appfaq">M2L</h1>
     <div class="container">
         <h2>Inscription</h2>
+        <!-- Formulaire d'inscription -->
         <form id="Inscription" action="register.php" method="POST">
             <label for="username">Pseudo</label>
             <br>
@@ -42,11 +45,14 @@
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
 
             <?php
+                // Récupération et hachage du mot de passe
                 $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
+                // Récupération des autres champs du formulaire
                 $username = isset($_POST['username'])? $_POST['username'] : '';
                 $email = isset($_POST['email'])? $_POST['email'] : '';
                 $ligue = isset($_POST['ligue'])? $_POST['ligue'] : '';
 
+                // Détermination de l'ID de la ligue
                 $id_ligue = 1;
                 switch($ligue) {
                     case 'liguefoot':
@@ -65,15 +71,21 @@
                         $id_ligue = 5;
                 }
 
+                // Si le formulaire est soumis
                 if (isset($_POST['inscrire'])) {
+                    // Connexion à la base de données
                     $dbh = db_connect();
+                    // Requête d'insertion de l'utilisateur
                     $sql = "insert into user_ (pseudo, mail, mdp, id_ligue, id_usertype) values ('$username', '$email', '$MDP_H', '$id_ligue', 3)";
                     try {
-                    $sth = $dbh->prepare($sql);
-                    $sth->execute();
+                        // Préparation et exécution de la requête
+                        $sth = $dbh->prepare($sql);
+                        $sth->execute();
                     } catch (PDOException $ex) {
-                    die("Erreur lors de la requête SQL : " . $ex->getMessage());
+                        // Gestion des erreurs
+                        die("Erreur lors de la requête SQL : " . $ex->getMessage());
                     }
+                    // Redirection vers la liste des utilisateurs
                     header('Location: list.php');
                 }
             ?>
@@ -83,6 +95,7 @@
     </div>
 
     <?php
+        // Inclusion du pied de page
         include '../../template/php/footer.php';
     ?>
     

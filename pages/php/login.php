@@ -28,28 +28,37 @@
             <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
 
             <?php
+            // Vérifie si le formulaire a été soumis
             if (isset($_POST['seco'])) {
+                // Récupère et sécurise les données du formulaire
                 $username = isset($_POST['username']) ? htmlspecialchars($_POST['username']) : '';
                 $password = isset($_POST['password']) ? $_POST['password'] : '';
 
+                // Vérifie si les champs ne sont pas vides
                 if (!empty($username) && !empty($password)) {
+                    // Connexion à la base de données
                     $dbh = db_connect();
                     
                     try {
+                        // Prépare et exécute la requête SQL pour récupérer l'utilisateur
                         $sql = "SELECT pseudo, mdp FROM user_ WHERE pseudo = :username";
                         $sth = $dbh->prepare($sql);
                         $sth->bindParam(':username', $username, PDO::PARAM_STR);
                         $sth->execute();
                         $user = $sth->fetch(PDO::FETCH_ASSOC);
                         
+                        // Vérifie si l'utilisateur existe et si le mot de passe est correct
                         if ($user && password_verify($password, $user['mdp'])) {
+                            // Démarre la session utilisateur et redirige vers la page de liste
                             $_SESSION["username"] = $username;
                             header('Location: list.php');
                             exit();
                         } else {
+                            // Affiche un message d'erreur si les identifiants sont incorrects
                             echo "<p style='color: red;'>Identifiant ou mot de passe incorrect</p>";
                         }
                     } catch (PDOException $ex) {
+                        // Affiche un message d'erreur en cas de problème avec la requête SQL
                         die("Erreur lors de la récupération des informations utilisateur : " . $ex->getMessage()."<br>".$sql);
                     }
                 }
