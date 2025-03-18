@@ -1,7 +1,4 @@
-<?php
-    include 'template/php/path.php';
-?>
-
+<?php include "template/php/path.php"; ?>
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -19,9 +16,6 @@
         <button class="btn" onclick="window.location.href='<?= path ?>/pages/php/register.php'">Inscription</button>
     </div>
 
-    <?php
-        include 'template/php/footer.php';
-    ?>
-
+    <?php include "template/php/footer.php"; ?>
 </body>
 </html>
