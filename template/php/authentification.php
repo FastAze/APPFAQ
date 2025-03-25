@@ -1,5 +1,17 @@
 <?php
+/**
+ * Fichier contenant les fonctions d'authentification et de gestion des droits
+ * Ce module fournit les fonctionnalités nécessaires pour vérifier l'identité des utilisateurs,
+ * leurs rôles et permissions dans l'application FAQ
+ */
 
+/**
+ * Récupère les informations d'un utilisateur depuis la base de données
+ * 
+ * @param PDO $dbh La connexion à la base de données
+ * @param string $username Le nom d'utilisateur à rechercher
+ * @return array|false Les informations de l'utilisateur ou false si non trouvé
+ */
 if (!function_exists('getUserInfo')) {
     function getUserInfo($dbh, $username) {
         $userQuery = "SELECT user_.id_user, user_.id_ligue, usertype.id_usertype, usertype.lib_usertype 
@@ -18,18 +30,39 @@ if (!function_exists('getUserInfo')) {
     }
 }
 
+/**
+ * Vérifie si un utilisateur possède le rôle d'administrateur
+ * 
+ * @param string $userType Le type d'utilisateur à vérifier
+ * @return bool True si l'utilisateur est un admin, false sinon
+ */
 if (!function_exists('isAdmin')) {
     function isAdmin($userType) {
         return $userType === 'Admin';
     }
 }
 
+/**
+ * Vérifie si un utilisateur possède le rôle de modérateur
+ * 
+ * @param string $userType Le type d'utilisateur à vérifier
+ * @return bool True si l'utilisateur est un modérateur, false sinon
+ */
 if (!function_exists('isModerator')) {
     function isModerator($userType) {
         return $userType === 'Moderator';
     }
 }
 
+/**
+ * Détermine si un utilisateur peut modifier un message spécifique
+ * Un administrateur peut modifier tous les messages
+ * Un modérateur peut uniquement modifier les messages de sa ligue
+ * 
+ * @param array $userInfo Les informations de l'utilisateur
+ * @param int $messageLigueId L'ID de la ligue à laquelle appartient le message
+ * @return bool True si l'utilisateur peut modifier le message, false sinon
+ */
 if (!function_exists('canEditMessage')) {
     function canEditMessage($userInfo, $messageLigueId) {
         return isAdmin($userInfo['lib_usertype']) || 
@@ -37,6 +70,13 @@ if (!function_exists('canEditMessage')) {
     }
 }
 
+/**
+ * Récupère les informations complètes d'un message de la FAQ
+ * 
+ * @param PDO $dbh La connexion à la base de données
+ * @param int $id_faq L'identifiant du message à récupérer
+ * @return array|false Les informations du message ou false si non trouvé
+ */
 if (!function_exists('getMessageInfo')) {
     function getMessageInfo($dbh, $id_faq) {
         $sql = "SELECT faq.*, user_.id_ligue, ligue.lib_ligue
@@ -56,6 +96,15 @@ if (!function_exists('getMessageInfo')) {
     }
 }
 
+/**
+ * Récupère tous les messages de la FAQ selon les droits de l'utilisateur
+ * Les administrateurs voient tous les messages
+ * Les autres utilisateurs ne voient que les messages de leur ligue
+ * 
+ * @param PDO $dbh La connexion à la base de données
+ * @param array $userInfo Les informations de l'utilisateur
+ * @return array Tableau contenant les messages de la FAQ
+ */
 if (!function_exists('getFaqMessages')) {
     function getFaqMessages($dbh, $userInfo) {
         $userType = $userInfo['lib_usertype'];
@@ -88,6 +137,10 @@ if (!function_exists('getFaqMessages')) {
     }
 }
 
+/**
+ * Redirige l'utilisateur vers la page de connexion s'il n'est pas authentifié
+ * Vérifie si la variable de session username existe
+ */
 if (!function_exists('redirectToLogin')) {
     function redirectToLogin() {
         if (!isset($_SESSION['username'])) {
@@ -97,6 +150,12 @@ if (!function_exists('redirectToLogin')) {
     }
 }
 
+/**
+ * Vérifie si l'utilisateur est authentifié et retourne ses informations
+ * 
+ * @param PDO $dbh La connexion à la base de données
+ * @return array|null Les informations de l'utilisateur ou null s'il n'est pas connecté
+ */
 if (!function_exists('checkAuthentication')) {
     function checkAuthentication($dbh) {
         if (!isset($_SESSION['username'])) {
