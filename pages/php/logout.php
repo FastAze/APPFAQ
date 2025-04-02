@@ -1,3 +1,19 @@
+<?php
+// Démarrage de la session si elle n'est pas déjà démarrée
+session_start();
+
+// Destruction des données de session
+$_SESSION = array();
+
+// Destruction du cookie de session si présent
+if (isset($_COOKIE[session_name()])) {
+    setcookie(session_name(), '', time()-42000, '/');
+}
+
+// Destruction de la session
+session_destroy();
+?>
+
 <!DOCTYPE html>
 <html lang="fr">
 <head>

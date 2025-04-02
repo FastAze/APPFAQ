@@ -49,23 +49,8 @@
         ?>
     </h1>
     
-    <!-- Formulaire de déconnexion -->
+    <!-- Formulaire de déconnexion - Modification du traitement -->
     <form action="<?= $base_url ?>/pages/php/logout.php" method="POST">
         <button class="btn" type="submit" name="deco">Déconnexion</button>
     </form>
-
-    <?php
-        // Vérification si le bouton de déconnexion a été cliqué
-        if (isset($_POST['deco']))
-        {
-            // Démarrage de la session, suppression des variables de session et destruction de la session
-            session_start();
-            session_unset();
-            session_destroy();
-            setcookie(session_name(),"",time()-3600);
-            
-            // Redirection vers la page de déconnexion
-            header('Location: ' . $base_url . '/pages/php/logout.php');
-        }
-    ?>
 </header>
