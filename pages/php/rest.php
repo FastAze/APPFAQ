@@ -35,14 +35,13 @@
             // Vérifie si le formulaire a été soumis
             if (isset($_POST['rest'])) {
                 // Récupère et sécurise les données du formulaire
-                $mail = isset($_POST['email']) ? $_POST['email'] : '';
+                $mail = isset($_POST['email']) ? $_POST['email'] : ''; 
                 $password = isset($_POST['password']) ? $_POST['password'] : '';
                 $MDP_H = isset($_POST['password']) ? password_hash($_POST['password'], PASSWORD_DEFAULT) : '';
                 $confPassword = isset($_POST['confPassword']) ? $_POST['confPassword'] : '';
 
                 // Vérifie si les champs ne sont pas vides
                 if (!empty($mail) && !empty($password) && !empty($confPassword)) {
-                    // Vérifie si les deux mots de passe correspondent
                     if ($password === $confPassword) {
                         // Connexion à la base de données
                         $dbh = db_connect();
@@ -51,7 +50,7 @@
                         try {
                             $sth = $dbh->prepare($sql);
                             $sth->execute(array(
-                            ':password' => $MDP_H,  // Utilisez le mot de passe hashé ici
+                            ':password' => $MDP_H,
                             ':email' => $mail
                             ));
                             echo '<p class="success">mot de pas bien rest c cool</p>';
