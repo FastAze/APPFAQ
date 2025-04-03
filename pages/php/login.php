@@ -25,7 +25,7 @@
             <input type="password" id="password" name="password" required>
             <br>
             <button class="btn" type="submit" name="seco">Se connecter</button>
-            <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button>
+            <button type="button" class="btn" onclick="window.location.href='../../index.php'">Annuler</button><br>
 
             <?php
             // Vérifie si le formulaire a été soumis
@@ -64,7 +64,7 @@
                 }
             }
             ?>
-
+            <a href="rest.php">mot de passe oublier ?</a>
             <p>Vous n'avez pas de compte : <a href="register.php">S'inscrire</a></p>
         </form>
     </div>
