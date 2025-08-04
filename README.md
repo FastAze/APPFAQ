@@ -1,4 +1,4 @@
-# M2L
+# APPFAQ
 ## Description : 
 Un site web codé en PHP et css composé d'une foire aux questions
 
